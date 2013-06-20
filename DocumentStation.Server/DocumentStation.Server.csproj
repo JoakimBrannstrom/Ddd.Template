@@ -39,6 +39,9 @@
     <Reference Include="NServiceBus.Core">
       <HintPath>..\packages\NServiceBus.3.3.8\lib\net40\NServiceBus.Core.dll</HintPath>
     </Reference>
+    <Reference Include="NServiceBus.Host">
+      <HintPath>..\packages\NServiceBus.Host.3.3.8\lib\net40\NServiceBus.Host.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,11 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EndpointConfig.cs" />
     <Compile Include="SearchIndexer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -62,4 +69,13 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+    <UsingTask TaskName="AsyncExec" AssemblyFile="$(SolutionDir)..\MsBuild.Tasks\MsBuild.Tasks\bin\Debug\Meganerd.MsBuild.Tasks.dll" />
+  <Target Name="StartRavenDb" AfterTargets="AfterBuild">
+    <AsyncExec WorkingDirectory="$(SolutionDir)" Command="StartRaven.cmd" />
+  </Target>
+
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
+  </PropertyGroup>
 </Project>
