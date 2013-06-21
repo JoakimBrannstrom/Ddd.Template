@@ -5,8 +5,9 @@
 @echo **********************
 @echo * [Starting RavenDb] *
 @echo **********************
-:: @start D:\Dropbox\Dev\Svn\LinkBlog\packages\RavenDB.1.0.888\server\Raven.Server.exe
-@start D:\Dropbox\Dev\Git\DocumentStation\packages\RavenDB.Server.2.0.2375\tools\Raven.Server.exe
+
+:: echo %cd% > currentDir.txt
+@start .\packages\RavenDB.Server.2.0.2375\tools\Raven.Server.exe
 
 @GOTO STARTPROCESS
 
