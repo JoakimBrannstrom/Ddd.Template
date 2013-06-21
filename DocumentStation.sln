@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EA8FAC
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentStation.Contracts", "DocumentStation.Contracts\DocumentStation.Contracts.csproj", "{F5B6DC24-BCFE-46E6-9041-C45AE0A9B761}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{7E96EE24-2B22-492C-B600-32CB0F2E0289}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E96EE24-2B22-492C-B600-32CB0F2E0289}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E96EE24-2B22-492C-B600-32CB0F2E0289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B6DC24-BCFE-46E6-9041-C45AE0A9B761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B6DC24-BCFE-46E6-9041-C45AE0A9B761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B6DC24-BCFE-46E6-9041-C45AE0A9B761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B6DC24-BCFE-46E6-9041-C45AE0A9B761}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
