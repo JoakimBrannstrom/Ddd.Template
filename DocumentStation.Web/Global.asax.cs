@@ -6,8 +6,8 @@ using System.Web.Routing;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using DocumentStation.Contracts.Commands;
-using DocumentStation.Web.App_Start;
 using DocumentStation.Web.Scaffolding;
+using DocumentStation.Web.Scaffolding.Configuration;
 using NServiceBus;
 
 namespace DocumentStation.Web

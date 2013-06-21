@@ -2,17 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <title>@ViewBag.Title - Document station</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
+
+	    @Styles.Render("~/Content/css")
+
+	    @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("Document Station", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -28,17 +30,18 @@
                 </div>
             </div>
         </header>
-        <div id="body">
+
+	    <div id="body">
             @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
+
+		    <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
             </section>
         </div>
-        <footer>
+
+	    <footer>
             <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
-                </div>
+                    &copy; @DateTime.Now.Year Joakim Brännström
             </div>
         </footer>
 

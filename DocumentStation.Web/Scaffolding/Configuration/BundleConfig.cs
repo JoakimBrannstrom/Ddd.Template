@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace DocumentStation.Web.App_Start
+namespace DocumentStation.Web.Scaffolding.Configuration
 {
 	public class BundleConfig
 	{

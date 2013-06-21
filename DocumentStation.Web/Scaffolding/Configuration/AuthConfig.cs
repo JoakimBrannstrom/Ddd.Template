@@ -1,4 +1,4 @@
-﻿namespace DocumentStation.Web.App_Start
+﻿namespace DocumentStation.Web.Scaffolding.Configuration
 {
 	public static class AuthConfig
 	{
