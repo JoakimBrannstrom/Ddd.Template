@@ -44,6 +44,9 @@
     <Reference Include="Castle.Windsor">
       <HintPath>..\packages\Castle.Windsor.3.2.0\lib\net45\Castle.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="EventStore">
+      <HintPath>..\packages\EventStore.3.2.0.28\lib\net40\EventStore.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
@@ -76,7 +79,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommitDispatchers\NServiceBusPublisher.cs" />
+    <Compile Include="CommitDispatchers\RavenDomainViewDispatcher.cs" />
     <Compile Include="Handlers\MessageHandler.cs" />
+    <Compile Include="Repository.cs" />
     <Compile Include="Scaffolding\EndpointConfig.cs" />
     <Compile Include="SearchIndexer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,7 +98,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Ddd.Template.Contracts\Ddd.Template.Contracts.csproj">
       <Project>{f5b6dc24-bcfe-46e6-9041-c45ae0a9b761}</Project>
-      <Name>DocumentStation.Contracts</Name>
+      <Name>Ddd.Template.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ddd.Template.Domain\Ddd.Template.Domain.csproj">
+      <Project>{d286f980-3634-4f6c-9b2e-334d2a44d07b}</Project>
+      <Name>Ddd.Template.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
