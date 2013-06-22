@@ -9,8 +9,8 @@
     <ProjectGuid>{5BB96129-595B-49FD-9EEF-06625EF17465}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DocumentStation.Web.Tests</RootNamespace>
-    <AssemblyName>DocumentStation.Web.Tests</AssemblyName>
+    <RootNamespace>Ddd.Template.Web.Tests</RootNamespace>
+    <AssemblyName>Ddd.Template.Web.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

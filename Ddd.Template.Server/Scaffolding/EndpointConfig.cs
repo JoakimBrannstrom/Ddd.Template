@@ -6,14 +6,14 @@ using Castle.Facilities.Logging;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
-using DocumentStation.Contracts;
+using Ddd.Template.Contracts;
 using NServiceBus;
 using Raven.Client;
 using Raven.Client.Document;
 using Raven.Client.Extensions;
 using log4net.Config;
 
-namespace DocumentStation.Server.Scaffolding
+namespace Ddd.Template.Server.Scaffolding
 {
 	public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, IWantCustomInitialization
 	{
@@ -45,7 +45,7 @@ namespace DocumentStation.Server.Scaffolding
 				.AddFacility<LoggingFacility>(f => f.UseLog4Net(Settings.Log4NetConfigurationFilename));
 
 			var logger = container.Resolve<ILogger>();
-			logger.Debug("Installing DocumentStation.Server components");
+			logger.Debug("Installing Ddd.Template.Server components");
 
 			return container;
 		}
@@ -76,9 +76,9 @@ namespace DocumentStation.Server.Scaffolding
 		private void ConfigureNServiceBus(Configure configuration, IWindsorContainer container)
 		{
 			configuration
-				.DefineEndpointName("DocumentStation.Domain")
+				.DefineEndpointName("Ddd.Template.Domain")
 				.CastleWindsorBuilder(container)
-				.RavenPersistence("NServiceBus.Persistence", "DocumentStation.NServiceBus.domain")
+				.RavenPersistence("NServiceBus.Persistence", "Ddd.Template.NServiceBus.domain")
 				.RunTimeoutManager()
 				.UseRavenTimeoutPersister()
 				.XmlSerializer()

@@ -1,4 +1,4 @@
-namespace DocumentStation.Server.Scaffolding
+namespace Ddd.Template.Server.Scaffolding
 {
 	public static class Settings
 	{

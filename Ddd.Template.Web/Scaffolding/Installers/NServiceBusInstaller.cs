@@ -2,10 +2,10 @@
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
-using DocumentStation.Contracts;
+using Ddd.Template.Contracts;
 using NServiceBus;
 
-namespace DocumentStation.Web.Scaffolding.Installers
+namespace Ddd.Template.Web.Scaffolding.Installers
 {
 	public class NServiceBusInstaller : IWindsorInstaller
 	{

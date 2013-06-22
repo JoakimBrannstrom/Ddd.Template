@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace DocumentStation.Web.Controllers
+namespace Ddd.Template.Web.Controllers
 {
 	public class HomeController : Controller
 	{

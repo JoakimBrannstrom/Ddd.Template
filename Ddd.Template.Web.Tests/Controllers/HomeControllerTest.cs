@@ -1,8 +1,8 @@
 ﻿using System.Web.Mvc;
-using DocumentStation.Web.Controllers;
+using Ddd.Template.Web.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DocumentStation.Web.Tests.Controllers
+namespace Ddd.Template.Web.Tests.Controllers
 {
 	[TestClass]
 	public class HomeControllerTest
@@ -17,6 +17,7 @@ namespace DocumentStation.Web.Tests.Controllers
 			var result = controller.Index() as ViewResult;
 
 			// Assert
+			Assert.IsNotNull(result);
 			Assert.AreEqual(null, result.ViewBag.Message);
 		}
 

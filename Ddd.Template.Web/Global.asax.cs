@@ -5,12 +5,12 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
-using DocumentStation.Contracts.Commands;
-using DocumentStation.Web.Scaffolding;
-using DocumentStation.Web.Scaffolding.Configuration;
+using Ddd.Template.Contracts.Commands;
+using Ddd.Template.Web.Scaffolding;
+using Ddd.Template.Web.Scaffolding.Configuration;
 using NServiceBus;
 
-namespace DocumentStation.Web
+namespace Ddd.Template.Web
 {
 	public class MvcApplication : System.Web.HttpApplication
 	{

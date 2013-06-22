@@ -1,6 +1,6 @@
 using System;
 
-namespace DocumentStation.Contracts
+namespace Ddd.Template.Contracts
 {
 	public enum MessageType
 	{
@@ -16,7 +16,7 @@ namespace DocumentStation.Contracts
 		{
 			var postfix = GetPostfix(messageType);
 
-			return t => t.Namespace != null && t.Namespace.StartsWith("DocumentStation.Contracts." + postfix);
+			return t => t.Namespace != null && t.Namespace.StartsWith("Ddd.Template.Contracts." + postfix);
 		}
 
 		private static string GetPostfix(MessageType messageType)

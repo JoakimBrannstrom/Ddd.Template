@@ -5,13 +5,13 @@ using Castle.MicroKernel.Facilities;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
-using DocumentStation.Web.Scaffolding.RavenIndexes;
+using Ddd.Template.Web.Scaffolding.RavenIndexes;
 using Raven.Client;
 using Raven.Client.Document;
 using Raven.Client.Extensions;
 using Raven.Client.Indexes;
 
-namespace DocumentStation.Web.Scaffolding.Installers
+namespace Ddd.Template.Web.Scaffolding.Installers
 {
 	public class RavenDbInstaller : IWindsorInstaller
 	{

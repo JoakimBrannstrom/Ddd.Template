@@ -1,4 +1,4 @@
-﻿namespace DocumentStation.Web.Scaffolding.Configuration
+﻿namespace Ddd.Template.Web.Scaffolding.Configuration
 {
 	public static class AuthConfig
 	{

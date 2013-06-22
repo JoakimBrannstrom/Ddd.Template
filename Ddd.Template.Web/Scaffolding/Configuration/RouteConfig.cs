@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace DocumentStation.Web.Scaffolding.Configuration
+namespace Ddd.Template.Web.Scaffolding.Configuration
 {
 	public class RouteConfig
 	{

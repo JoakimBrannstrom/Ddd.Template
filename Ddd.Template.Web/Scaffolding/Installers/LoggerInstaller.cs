@@ -3,7 +3,7 @@ using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 
-namespace DocumentStation.Web.Scaffolding.Installers
+namespace Ddd.Template.Web.Scaffolding.Installers
 {
 	public class LoggerInstaller : IWindsorInstaller
 	{

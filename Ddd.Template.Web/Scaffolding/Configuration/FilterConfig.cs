@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace DocumentStation.Web.Scaffolding.Configuration
+namespace Ddd.Template.Web.Scaffolding.Configuration
 {
 	public class FilterConfig
 	{

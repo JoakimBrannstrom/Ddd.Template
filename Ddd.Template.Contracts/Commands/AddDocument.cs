@@ -1,4 +1,4 @@
-﻿namespace DocumentStation.Contracts.Commands
+﻿namespace Ddd.Template.Contracts.Commands
 {
 	public class AddDocument
 	{

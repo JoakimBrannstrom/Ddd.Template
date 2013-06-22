@@ -1,7 +1,6 @@
-﻿using System.Linq;
-using Raven.Client.Indexes;
+﻿using Raven.Client.Indexes;
 
-namespace DocumentStation.Web.Scaffolding.RavenIndexes
+namespace Ddd.Template.Web.Scaffolding.RavenIndexes
 {
 	public class TagCount
 	{

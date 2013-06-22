@@ -1,8 +1,8 @@
 ﻿using Castle.Core.Logging;
-using DocumentStation.Contracts.Commands;
+using Ddd.Template.Contracts.Commands;
 using NServiceBus;
 
-namespace DocumentStation.Server.Handlers
+namespace Ddd.Template.Server.Handlers
 {
 	class MessageHandler : IHandleMessages<AddDocument>
 	{

@@ -3,9 +3,9 @@ using Castle.Core;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
-using DocumentStation.Web.Controllers;
+using Ddd.Template.Web.Controllers;
 
-namespace DocumentStation.Web.Scaffolding.Installers
+namespace Ddd.Template.Web.Scaffolding.Installers
 {
 	public class ControllersInstaller : IWindsorInstaller
 	{
