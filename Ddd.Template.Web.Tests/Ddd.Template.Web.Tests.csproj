@@ -49,7 +49,7 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DocumentStation.Web\DocumentStation.Web.csproj">
+    <ProjectReference Include="..\Ddd.Template.Web\Ddd.Template.Web.csproj">
       <Project>{ED0D0BB4-3020-47AB-ADD6-BB7D3026C038}</Project>
       <Name>DocumentStation.Web</Name>
     </ProjectReference>

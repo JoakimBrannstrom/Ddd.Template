@@ -90,7 +90,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DocumentStation.Contracts\DocumentStation.Contracts.csproj">
+    <ProjectReference Include="..\Ddd.Template.Contracts\Ddd.Template.Contracts.csproj">
       <Project>{f5b6dc24-bcfe-46e6-9041-c45ae0a9b761}</Project>
       <Name>DocumentStation.Contracts</Name>
     </ProjectReference>

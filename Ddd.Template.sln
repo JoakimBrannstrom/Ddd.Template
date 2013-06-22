@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentStation.Web", "DocumentStation.Web\DocumentStation.Web.csproj", "{ED0D0BB4-3020-47AB-ADD6-BB7D3026C038}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Web", "Ddd.Template.Web\Ddd.Template.Web.csproj", "{ED0D0BB4-3020-47AB-ADD6-BB7D3026C038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentStation.Web.Tests", "DocumentStation.Web.Tests\DocumentStation.Web.Tests.csproj", "{5BB96129-595B-49FD-9EEF-06625EF17465}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Web.Tests", "Ddd.Template.Web.Tests\Ddd.Template.Web.Tests.csproj", "{5BB96129-595B-49FD-9EEF-06625EF17465}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentStation.Server", "DocumentStation.Server\DocumentStation.Server.csproj", "{7E96EE24-2B22-492C-B600-32CB0F2E0289}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Server", "Ddd.Template.Server\Ddd.Template.Server.csproj", "{7E96EE24-2B22-492C-B600-32CB0F2E0289}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BDC64962-9C20-45E5-95B0-7C06968768A2}"
 	ProjectSection(SolutionItems) = preProject
@@ -20,7 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{EA8FAC
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentStation.Contracts", "DocumentStation.Contracts\DocumentStation.Contracts.csproj", "{F5B6DC24-BCFE-46E6-9041-C45AE0A9B761}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Contracts", "Ddd.Template.Contracts\Ddd.Template.Contracts.csproj", "{F5B6DC24-BCFE-46E6-9041-C45AE0A9B761}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
