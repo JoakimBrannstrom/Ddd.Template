@@ -83,6 +83,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Aggregates\Visitor\WhenAddVisitorLogin.cs" />
+    <Compile Include="Aggregates\Visitor\WhenVisitorIsAdded.cs" />
     <Compile Include="CommandTestFixture.cs" />
     <Compile Include="Contracts\AllCommandsHaveAtleastOneHandler.cs" />
     <Compile Include="Contracts\MessagesAreSerializable.cs" />
