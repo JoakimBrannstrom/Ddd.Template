@@ -86,7 +86,8 @@
     <Compile Include="Aggregates\Visitor\WhenAddVisitorLogin.cs" />
     <Compile Include="Aggregates\Visitor\WhenVisitorIsAdded.cs" />
     <Compile Include="CommandTestFixture.cs" />
-    <Compile Include="Contracts\AllCommandsHaveAtleastOneHandler.cs" />
+    <Compile Include="Contracts\AllCommandHandlerMethodsShouldHaveAtleastOneTest.cs" />
+    <Compile Include="Contracts\AllCommandsShouldHaveAtleastOneHandler.cs" />
     <Compile Include="Contracts\MessagesAreSerializable.cs" />
     <Compile Include="Contracts\Serialization\CommandHasSerializableProperties.cs" />
     <Compile Include="Contracts\Serialization\Visitor\AddVisitorHasSerializableProperties.cs" />

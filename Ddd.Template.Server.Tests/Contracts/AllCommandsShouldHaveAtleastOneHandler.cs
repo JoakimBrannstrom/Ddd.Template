@@ -10,11 +10,11 @@ using NServiceBus;
 namespace Ddd.Template.Server.Tests.Contracts
 {
 	[TestClass]
-	public class AllCommandsHaveAtleastOneHandler
+	public class AllCommandsShouldHaveAtleastOneHandler
 	{
 		// https://gist.github.com/MarkNijhof/Fohjin/blob/master/Fohjin.DDD.Example/Test.Fohjin.DDD/Commands/All_commands_must_have_a_handler.cs
 		[TestMethod]
-		public void VerifyThatEachCommandHasAtleastOneCommandHandler()
+		public void VerifyThatEachCommandHaveAtleastOneCommandHandler()
 		{
 			var commands = TypeFinder.GetAssignableTypes(typeof(Command));
 

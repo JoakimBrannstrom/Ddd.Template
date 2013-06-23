@@ -9,6 +9,7 @@ using Moq;
 
 namespace Ddd.Template.Server.Tests.Aggregates.Visitor
 {
+/*
 	public abstract class WhenAddVisitorLogin : CommandTestFixture<Domain.Aggregates.Visitor, AddVisitorLogin, VisitorCommandHandler>
 	{
 		protected abstract Guid UserId { get; }
@@ -54,4 +55,5 @@ namespace Ddd.Template.Server.Tests.Aggregates.Visitor
 			}
 		}
 	}
+*/
 }

@@ -9,7 +9,8 @@ namespace Ddd.Template.Domain.CommandHandlers
 										IHandleMessages<AddVisitor>,
 										IHandleMessages<AddVisitorLogin>
 	{
-		public VisitorCommandHandler(IRepository<Visitor> repository) : base(repository)
+		public VisitorCommandHandler(IRepository<Visitor> repository)
+			: base(repository)
 		{
 		}
 

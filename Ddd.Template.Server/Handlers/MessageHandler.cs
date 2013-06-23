@@ -4,7 +4,7 @@ using NServiceBus;
 
 namespace Ddd.Template.Server.Handlers
 {
-	class MessageHandler : IHandleMessages<AddDocument>
+	public class MessageHandler : IHandleMessages<AddDocument>
 	{
 		private readonly ILogger _logger;
 
