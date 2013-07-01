@@ -8,9 +8,9 @@ namespace Ddd.Template.Server.CommitDispatchers
 {
 	public class NServiceBusPublisher : IDispatchCommits
 	{
-		private const string AggregateIdKey = "AggregateId";
-		private const string CommitVersionKey = "CommitVersion";
-		private const string EventVersionKey = "EventVersion";
+		// private const string AggregateIdKey = "AggregateId";
+		// private const string CommitVersionKey = "CommitVersion";
+		// private const string EventVersionKey = "EventVersion";
 		// private const string BusPrefixKey = "Bus.";
 
 		private readonly RavenDomainViewDispatcher _ravenDispatcher;
@@ -65,11 +65,12 @@ namespace Ddd.Template.Server.CommitDispatchers
 			busMessage.SetHeader(CommitVersionKey, commit.StreamRevision.ToString());
 			busMessage.SetHeader(EventVersionKey, GetSpecificEventVersion(commit, index).ToString());
 		}
-*/
+
 		private static int GetSpecificEventVersion(Commit commit, int index)
 		{
 			// e.g. (StreamRevision: 120) - (5 events) + 1 + (index @ 4: the last index) = event version: 120
 			return commit.StreamRevision - commit.Events.Count + 1 + index;
 		}
+*/
 	}
 }

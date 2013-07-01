@@ -46,7 +46,7 @@ namespace Ddd.Template.Web.Scaffolding.Installers
 								.LifeStyle.Transient);
 		}
 
-		public void SetDbName(string dbName)
+		private void SetDbName(string dbName)
 		{
 			_projectionsDbName = dbName;
 		}
@@ -57,7 +57,7 @@ namespace Ddd.Template.Web.Scaffolding.Installers
 			return store.OpenSession();
 		}
 
-		public void InitializeDocumentStore(IKernel kernel, IDocumentStore store)
+		private void InitializeDocumentStore(IKernel kernel, IDocumentStore store)
 		{
 			store.Initialize();
 

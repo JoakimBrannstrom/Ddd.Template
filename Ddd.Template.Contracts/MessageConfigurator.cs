@@ -10,7 +10,7 @@ namespace Ddd.Template.Contracts
 		Event
 	}
 
-	public class MessageConfigurator
+	public static class MessageConfigurator
 	{
 		public static Func<Type, bool> GetMessageTypeDefinition(MessageType messageType)
 		{

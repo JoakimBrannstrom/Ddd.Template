@@ -20,14 +20,14 @@ namespace Ddd.Template.Web.Scaffolding.Installers
 
 			AddUnbotrusiveConventions(configure);
 
-			var bus = configure
-						.CastleWindsorBuilder(container)
-						.XmlSerializer()
-						.MsmqTransport()
-						.IsTransactional(false)
-						.PurgeOnStartup(false)
-						.UnicastBus()
-						.SendOnly();
+			configure
+				.CastleWindsorBuilder(container)
+				.XmlSerializer()
+				.MsmqTransport()
+				.IsTransactional(false)
+				.PurgeOnStartup(false)
+				.UnicastBus()
+				.SendOnly();
 		}
 
 		private static void AddUnbotrusiveConventions(Configure configuration)

@@ -84,7 +84,6 @@
     <Compile Include="Handlers\MessageHandler.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Scaffolding\EndpointConfig.cs" />
-    <Compile Include="SearchIndexer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scaffolding\Settings.cs" />
   </ItemGroup>

@@ -28,14 +28,9 @@ namespace Ddd.Template.Server.Tests.Contracts
 
 		private IEnumerable<Type> GetCommandsWithoutHandler(IEnumerable<Type> commands)
 		{
-			foreach (var command in commands)
-			{
-				if (command.IsAbstract)
-					continue;	// hmm, should we expect handlers for abstract types?
-
-				if (HandlerExists(command) == false)
-					yield return command;
-			}
+			return commands
+					.Where(command => !command.IsAbstract)	// hmm, should we expect handlers for abstract types?
+					.Where(command => HandlerExists(command) == false);
 		}
 
 		private bool HandlerExists(Type command)

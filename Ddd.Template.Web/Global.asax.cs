@@ -14,7 +14,7 @@ namespace Ddd.Template.Web
 {
 	public class MvcApplication : System.Web.HttpApplication
 	{
-		protected static IWindsorContainer Container;
+		private static IWindsorContainer Container;
 
 		protected void Application_Start()
 		{

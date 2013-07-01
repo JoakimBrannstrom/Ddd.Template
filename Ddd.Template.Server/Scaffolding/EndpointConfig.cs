@@ -17,11 +17,9 @@ namespace Ddd.Template.Server.Scaffolding
 {
 	public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, IWantCustomInitialization
 	{
-		protected IWindsorContainer Container;
-
 		public void Init()
 		{
-			Container = BootstrapContainer();
+			var container = BootstrapContainer();
 
 			SetNServiceBusLoggingLibrary();
 
@@ -29,11 +27,11 @@ namespace Ddd.Template.Server.Scaffolding
 
 			AddUnbotrusiveConventions(configuration);
 
-			ConfigureNServiceBus(configuration, Container);
+			ConfigureNServiceBus(configuration, container);
 
-			RegisterDocumentStore(Container);
+			RegisterDocumentStore(container);
 
-			Container.Install(FromAssembly.This());
+			container.Install(FromAssembly.This());
 		}
 
 		private IWindsorContainer BootstrapContainer()
