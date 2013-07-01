@@ -154,7 +154,12 @@ namespace Ddd.Template.Server.Tests.Contracts
 
 		private static string GetMethodSignature(MethodInfo t)
 		{
-			return string.Format("\t* {0}::{1}({2})", t.DeclaringType.Name, t.Name, GetParameters(t));
+			var name = "[Unknown DeclaringType]";
+
+			if (t.DeclaringType != null)
+				name = t.DeclaringType.Name;
+
+			return string.Format("\t* {0}::{1}({2})", name, t.Name, GetParameters(t));
 		}
 
 		private static string GetParameters(MethodInfo t)
