@@ -37,9 +37,9 @@ namespace Ddd.Template.Server.Tests.Contracts.Serialization
 		{
 			Assert.AreEqual(expected.Count, actual.Count);
 
-			foreach (var language in expected)
+			foreach (var item in expected)
 			{
-				Assert.IsTrue(actual.Contains(language));
+				Assert.IsTrue(actual.Contains(item));
 			}
 		}
 

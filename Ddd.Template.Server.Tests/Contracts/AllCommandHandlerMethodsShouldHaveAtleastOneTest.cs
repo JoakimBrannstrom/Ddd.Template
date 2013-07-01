@@ -30,7 +30,8 @@ namespace Ddd.Template.Server.Tests.Contracts
 
 				var methodsWithoutTests = GetMethodsWithoutTests(handler, contracts, testFixtures).ToArray();
 
-				var message = string.Format("The following command handler methods are not covered by tests: {0}{1}", Environment.NewLine,
+				var message = string.Format("{0}{1}{0}",
+											Environment.NewLine,
 											string.Join(Environment.NewLine, methodsWithoutTests.Select(GetMethodSignature)));
 
 				if (methodsWithoutTests.Any())
@@ -38,7 +39,7 @@ namespace Ddd.Template.Server.Tests.Contracts
 			}
 
 			if (errorMessages.Length > 0)
-				Assert.Fail(errorMessages.ToString());
+				Assert.Fail("The following command handler methods are not covered by tests:" + Environment.NewLine + errorMessages);
 		}
 
 		private static IEnumerable<Type> GetMessageHandlerContracts(Type messageHandlerCandidate)
