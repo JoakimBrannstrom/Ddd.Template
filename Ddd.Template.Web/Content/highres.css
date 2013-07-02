@@ -5,6 +5,11 @@
 
 /* font size: 16px multiplied with 60em (width of header, #body, footer) equals 960px */
 
+
+	body {
+		background-image: url('images/background-blue.jpg');
+	}
+
 	.site-title {
 		float: left;
 	}
@@ -14,6 +19,8 @@
 	html ul#menu {
 		text-align: right;
 	}
+
+	html footer { text-align: left; }
 
 	/* content */
 	article {
