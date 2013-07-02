@@ -18,5 +18,10 @@ namespace Ddd.Template.Web.Controllers
 		{
 			return View();
 		}
+
+		public ActionResult ClientInformation()
+		{
+			return View();
+		}
 	}
 }

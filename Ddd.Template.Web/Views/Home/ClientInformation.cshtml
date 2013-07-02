@@ -1,0 +1,47 @@
+﻿@model dynamic
+
+@{
+	ViewBag.Title = "Client information.";
+	ViewBag.Message = "Here you can find some information about your browser.";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+	<div>
+		<h3>Javascript information</h3>
+		<div class="javascript-informtion">Disabled</div>
+	</div>
+</article>
+
+@section scripts {
+	<script src="/Scripts/BrowserDetect.js"></script>
+
+	<script type="text/javascript">
+	//<![CDATA[
+		var message = '';
+
+		BrowserDetect.init();
+		message += '<br />OS name: ' + BrowserDetect.OS;
+		message += '<br />Browser name: ' + BrowserDetect.browser;
+		message += '<br />Browser version: ' + BrowserDetect.version;
+
+		message += '<br />';
+
+		var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+		if (connection) {
+			message += '<br />Your browser supports the Network Information API!';
+			message += '<br />Bandwidth: ' + connection.bandwidth;
+			message += '<br />Metered: ' + connection.metered;
+		}
+		else {
+			message += '<br />Your browser does not support the Network Information API.';
+		}
+
+		$(".javascript-informtion").html(message);
+	//]]>
+    </script>
+}
