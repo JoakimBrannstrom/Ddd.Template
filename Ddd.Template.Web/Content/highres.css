@@ -1,10 +1,28 @@
-﻿/* content */
-article {
-	float: left;
-	width: 70%;
-}
+﻿/********************
+*   Desktop Styles   *
+********************/
+@media only screen and (min-width: 960px) {
 
-aside {
-	float: right;
-	width: 25%;
+/* font size: 16px multiplied with 60em (width of header, #body, footer) equals 960px */
+
+	.site-title {
+		float: left;
+	}
+
+	html #login,
+	html nav,
+	html ul#menu {
+		text-align: right;
+	}
+
+	/* content */
+	article {
+		float: left;
+		width: 70%;
+	}
+
+	aside {
+		float: right;
+		width: 25%;
+	}
 }

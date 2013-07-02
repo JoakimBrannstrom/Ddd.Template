@@ -1,5 +1,14 @@
 ﻿@import url('highres.css');
 
+/* Reset
+----------------------------------------------------------*/
+header, footer, hgroup,
+nav, section {
+	display: block;
+}
+
+/* Basic styles
+----------------------------------------------------------*/
 html {
 	margin: 0;
 	padding: 0;
@@ -13,26 +22,9 @@ body {
 	font-family: Verdana, Helvetica, Sans-Serif;
 	margin: 0;
 	padding: 0;
-	padding-bottom: 1em;
-	padding-top: 1em;
+	padding-bottom: 2em;
+	padding-top: 2em;
 }
-
-
-
-/* For modern browsers */
-.clearfix:before,
-.clearfix:after {
-    content:"";
-    display:table;
-}
-.clearfix:after {
-    clear:both;
-}
-/* For IE 6/7 (trigger hasLayout) */
-.clearfix {
-    zoom:1;
-}
-
 
 a {
 	color: #333;
@@ -50,20 +42,8 @@ a:focus {
 	text-decoration: none;
 }
 
-header, footer, hgroup,
-nav, section {
-	display: block;
-}
-
-.site-title {
-	float: left;
-}
-
-#login,
-nav {
-	text-align: right;
-}
-
+/* headers
+----------------------------------------------------------*/
 h1, h2, h3,
 h4, h5, h6 {
 	color: #000;
@@ -77,6 +57,8 @@ h3 { font-size: 1.2em; }
 h4 { font-size: 1.1em; }
 h5, h6 { font-size: 1em; }
 
+/* Lists
+----------------------------------------------------------*/
 ul {
 	list-style: none;
 	padding: 0;
@@ -87,7 +69,9 @@ dl {
 	margin: 0;
 }
 
-dt, dd {
+dt,
+dd,
+li {
 	margin: 0;
 	padding: 0;
 }
@@ -100,6 +84,23 @@ dt {
 
 dd {
 	padding-left: 1em;
+}
+
+/* Clearfix
+----------------------------------------------------------*/
+
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
 }
 
 /* main layout
@@ -121,6 +122,13 @@ footer .content-wrapper { font-size: .8em; padding-bottom: 1.5em; }
 .main-content { background: url("images/accent.png") no-repeat 1em 0; }
 .featured + .main-content { background-image: url("images/heroAccent.png"); }
 
+.site-title,
+#login,
+ul#menu,
+footer {
+	text-align: center;
+}
+
 
 /* site title
 ----------------------------------------------------------*/
@@ -128,11 +136,9 @@ footer .content-wrapper { font-size: .8em; padding-bottom: 1.5em; }
 	color: #c8c8c8;
 	font-family: "Courier New", Courier, monospace;
 	font-size: 2.3em;
-	margin: 0;
 }
 
 .site-title a {
-	background: none;
 	color: #c8c8c8;
 	text-decoration: none;
 }
@@ -143,37 +149,11 @@ footer .content-wrapper { font-size: .8em; padding-bottom: 1.5em; }
 	display: block;
 	font-size: .85em;
 }
-/*
-#login a {
-	background-color: #d3dce0;
-	margin-left: 10px;
-	margin-right: 3px;
-	padding: 2px 3px;
-	text-decoration: none;
-}
-
-#login a.username {
-	background: none;
-	margin: 0;
-	padding: 0;
-	text-decoration: underline;
-}
-
-#login ul {
-	margin: 0;
-}
-
-#login li {
-	display: inline;
-	list-style: none;
-}
-*/
 
 /* menu
 ----------------------------------------------------------*/
 ul#menu {
 	font-size: 1.3em;
-	text-align: right;
 }
 
 ul#menu li {
@@ -183,17 +163,11 @@ ul#menu li {
 }
 
 ul#menu li a { color: #999; }
+ul#menu li a:hover { color: #333; }
 
-ul#menu li a:hover {
-	color: #333;
-}
-
-
-/* page elements
+/* Page elements
 ----------------------------------------------------------*/
 /* featured */
-.featured { background-color: #fff; }
-
 .featured .content-wrapper {
 	background-color: #7ac0da;
 	color: #3e5667;
@@ -204,79 +178,16 @@ ul#menu li a:hover {
 .featured p { font-size: 1.1em; }
 
 /* page titles */
-hgroup.title { margin-bottom: 10px; }
-
 hgroup.title h1, hgroup.title h2 { display: inline; }
 
-hgroup.title h2 {
-	font-weight: normal;
-	margin-left: 3px;
-}
+hgroup.title h2 { font-weight: normal; }
 
-
-/* login page */
-/*
-#loginForm {
-	border-right: solid 2px #c8c8c8;
-	float: left;
-	width: 55%;
-}
-
-#loginForm .validation-error {
-	display: block;
-	margin-left: 15px;
-}
-
-#loginForm .validation-summary-errors ul {
-	margin: 0;
-	padding: 0;
-}
-
-#loginForm .validation-summary-errors li {
-	display: inline;
-	list-style: none;
-	margin: 0;
-}
-
-#loginForm input {
-	width: 250px;
-}
-
-#loginForm input[type="checkbox"],
-#loginForm input[type="submit"],
-#loginForm input[type="button"],
-#loginForm button {
-	width: auto;
-}
-
-#socialLoginForm {
-	margin-left: 40px;
-	float: left;
-	width: 40%;
-}
-
-#socialLoginForm h2 {
-	margin-bottom: 5px;
-}
-
-#socialLoginList button {
-	margin-bottom: 12px;
-}
-
-#logoutForm {
-	display: inline;
-}
-*/
-
-/* forms */
+/* Forms
+----------------------------------------------------------*/
 fieldset {
-	border: none;
+	border: 1px solid #e2e2e2;
 	margin: 0;
-	padding: 0;
-}
-
-fieldset legend {
-	display: none;
+	padding: 0.5em;
 }
 
 label {
@@ -285,26 +196,20 @@ label {
 	font-weight: 600;
 }
 
-label.checkbox {
-	display: inline;
-}
+label.checkbox { display: inline; }
 
 input, textarea {
 	border: 1px solid #e2e2e2;
 	font-size: 1.2em;
 	margin: 5px 0 6px 0;
 	padding: 5px;
-	min-width: 95%;
+	min-width: 97%;
 	max-width: 25em;
 }
 
 textarea {
 	font-family: inherit;
 	height: 5em;
-}
-
-input:focus, textarea:focus {
-	outline: 3px solid #7ac0da;
 }
 
 input[type="checkbox"] {
@@ -328,13 +233,8 @@ button {
 	width: auto;
 }
 
-input[type="submit"]:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-button:active,
-input[type="submit"]:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
+input:focus,
+textarea:focus,
 button:focus {
 	outline: 3px solid #7ac0da;
 }
@@ -343,12 +243,8 @@ form input[type=submit]:first-of-type {
 	background-color: #7ac0da;
 }
 
-/*
-input:invalid + label:after { content: ' ⨉'; }
-input:valid:after { content: ' ✓'; }
-*/
-
-/* info and errors */
+/* User feedback
+----------------------------------------------------------*/
 .message-info {
 	border: 1px solid;
 	clear: both;
@@ -400,190 +296,4 @@ input[type="checkbox"].input-validation-error {
 
 .validation-summary-valid {
 	display: none;
-}
-
-
-/* tables
-----------------------------------------------------------*/
-/*
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	margin-top: 0.75em;
-	border: 0 none;
-}
-
-th {
-	font-size: 1.2em;
-	text-align: left;
-	border: none 0;
-	padding-left: 0;
-}
-
-th a {
-	display: block;
-	position: relative;
-}
-
-th a:link, th a:visited, th a:active, th a:hover {
-	color: #333;
-	font-weight: 600;
-	text-decoration: none;
-	padding: 0;
-}
-
-th a:hover {
-	color: #000;
-}
-
-th.asc a, th.desc a {
-	margin-right: .75em;
-}
-
-th.asc a:after, th.desc a:after {
-	display: block;
-	position: absolute;
-	right: 0;
-	top: 0;
-	font-size: 0.75em;
-}
-
-th.asc a:after {
-	content: '▲';
-}
-
-th.desc a:after {
-	content: '▼';
-}
-
-td {
-	padding: 0.25em 2em 0.25em 0;
-	border: 0 none;
-}
-
-tr.pager td {
-	padding: 0 0.25em 0 0;
-}
-*/
-
-/********************
-*   Mobile Styles   *
-********************/
-@media only screen and (max-width: 960px) { /* font size: 16px multiplied with 60em (width of header, #body, footer) equals 960px */
-
-	/* header
-    ----------------------------------------------------------*/
-	header .site-title {
-		float: none;
-	}
-
-	/* logo */
-	header .site-title {
-		margin: 10px;
-		text-align: center;
-	}
-
-	/* login */
-	#login {
-		font-size: .85em;
-		margin: 0 0 12px;
-		text-align: center;
-	}
-
-	#login ul {
-		margin: 5px 0;
-		padding: 0;
-	}
-
-	#login li {
-		display: inline;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	#login a {
-		background: none;
-		color: #999;
-		font-weight: 600;
-		margin: 2px;
-		padding: 0;
-	}
-
-	#login a:hover {
-		color: #333;
-	}
-
-	/* menu */
-	nav {
-		margin-bottom: 5px;
-	}
-
-	ul#menu {
-		margin: 0;
-		padding: 0;
-		text-align: center;
-	}
-
-	ul#menu li {
-		margin: 0;
-		padding: 0;
-	}
-
-
-	/* main layout
-    ----------------------------------------------------------*/
-	.main-content,
-	.featured + .main-content {
-		background-position: 10px 0;
-	}
-
-	.content-wrapper {
-		padding-right: 10px;
-		padding-left: 10px;
-	}
-
-	.featured .content-wrapper {
-		padding: 10px;
-	}
-
-	/* page content */
-	article, aside {
-		float: none;
-		width: 100%;
-	}
-
-	/* forms */
-	input {
-		width: 90%;
-	}
-
-	/* login page */
-	#loginForm {
-		border-right: none;
-		float: none;
-		width: auto;
-	}
-
-	#loginForm .validation-error {
-		display: block;
-		margin-left: 15px;
-	}
-
-	#socialLoginForm {
-		margin-left: 0;
-		float: none;
-		width: auto;
-	}
-
-
-	footer {
-		text-align: center;
-		height: auto;
-		padding: 10px 0;
-	}
-
-	footer p {
-		margin: 0;
-	}
 }
