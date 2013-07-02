@@ -205,6 +205,7 @@
     <Compile Include="Scaffolding\WindsorControllerFactory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\highres.css" />
     <Content Include="Content\Images\background-blue.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

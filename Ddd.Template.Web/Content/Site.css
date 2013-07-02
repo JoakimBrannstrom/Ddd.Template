@@ -1,4 +1,6 @@
-﻿html {
+﻿@import url('highres.css');
+
+html {
 	margin: 0;
 	padding: 0;
 }
@@ -15,6 +17,8 @@ body {
 	padding-top: 1em;
 }
 
+
+
 /* For modern browsers */
 .clearfix:before,
 .clearfix:after {
@@ -30,18 +34,6 @@ body {
 }
 
 
-
-
-img {
-	color: #999;
-	content: attr(alt);
-	font-size: 1.5em;
-	font-weight: 600;
-}
-
-
-
-
 a {
 	color: #333;
 	text-decoration: underline;
@@ -52,9 +44,9 @@ a:active, a:hover {
 	color: #333;
 }
 
-a:hover {
-	background-color: #c7d1d6;
-	outline: #7ac0da solid thin;
+a:hover,
+a:focus {
+	outline: 3px solid #7ac0da;
 	text-decoration: none;
 }
 
@@ -221,16 +213,6 @@ hgroup.title h2 {
 	margin-left: 3px;
 }
 
-/* content */
-article {
-	float: left;
-	width: 70%;
-}
-
-aside {
-	float: right;
-	width: 25%;
-}
 
 /* login page */
 /*
@@ -309,21 +291,20 @@ label.checkbox {
 
 input, textarea {
 	border: 1px solid #e2e2e2;
-	background: #fff;
-	color: #333;
 	font-size: 1.2em;
 	margin: 5px 0 6px 0;
 	padding: 5px;
-	width: 300px;
+	min-width: 95%;
+	max-width: 25em;
 }
 
 textarea {
 	font-family: inherit;
-	width: 500px;
+	height: 5em;
 }
 
 input:focus, textarea:focus {
-	border: 1px solid #7ac0da;
+	outline: 3px solid #7ac0da;
 }
 
 input[type="checkbox"] {
@@ -334,16 +315,38 @@ input[type="checkbox"] {
 
 input[type="submit"],
 input[type="button"],
+input[type="reset"],
 button {
 	background-color: #d3dce0;
 	border: 1px solid #787878;
 	cursor: pointer;
 	font-size: 1.2em;
 	font-weight: 600;
-	padding: 7px;
 	margin-right: 8px;
+	min-width: auto;
+	max-width: auto;
 	width: auto;
 }
+
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+button:active,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+button:focus {
+	outline: 3px solid #7ac0da;
+}
+
+form input[type=submit]:first-of-type {
+	background-color: #7ac0da;
+}
+
+/*
+input:invalid + label:after { content: ' ⨉'; }
+input:valid:after { content: ' ✓'; }
+*/
 
 /* info and errors */
 .message-info {
@@ -466,7 +469,7 @@ tr.pager td {
 /********************
 *   Mobile Styles   *
 ********************/
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 960px) { /* font size: 16px multiplied with 60em (width of header, #body, footer) equals 960px */
 
 	/* header
     ----------------------------------------------------------*/
