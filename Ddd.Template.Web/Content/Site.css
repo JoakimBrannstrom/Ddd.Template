@@ -1,24 +1,49 @@
 ﻿html {
-	background-color: #e2e2e2;
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	background-color: #fff;
-	border-top: solid 10px #000;
+	background-color: #e2e2e2;
+	background-image: url('images/background-blue.jpg');
 	color: #333;
-	font-size: .85em;
-	font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+	font-size: 16px;
+	font-family: Verdana, Helvetica, Sans-Serif;
 	margin: 0;
 	padding: 0;
+	padding-bottom: 1em;
+	padding-top: 1em;
 }
+
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}
+
+
+
+
+img {
+	color: #999;
+	content: attr(alt);
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+
+
 
 a {
 	color: #333;
-	outline: none;
-	padding-left: 3px;
-	padding-right: 3px;
 	text-decoration: underline;
 }
 
@@ -29,6 +54,8 @@ a:active, a:hover {
 
 a:hover {
 	background-color: #c7d1d6;
+	outline: #7ac0da solid thin;
+	text-decoration: none;
 }
 
 header, footer, hgroup,
@@ -36,26 +63,13 @@ nav, section {
 	display: block;
 }
 
-mark {
-	background-color: #a6dbed;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
-.float-left {
+.site-title {
 	float: left;
 }
 
-.float-right {
-	float: right;
-}
-
-.clear-fix:after {
-	content: ".";
-	clear: both;
-	display: block;
-	height: 0;
-	visibility: hidden;
+#login,
+nav {
+	text-align: right;
 }
 
 h1, h2, h3,
@@ -65,36 +79,18 @@ h4, h5, h6 {
 	padding-bottom: 0;
 }
 
-h1 {
-	font-size: 2em;
-}
-
-h2 {
-	font-size: 1.75em;
-}
-
-h3 {
-	font-size: 1.2em;
-}
-
-h4 {
-	font-size: 1.1em;
-}
-
-h5, h6 {
-	font-size: 1em;
-}
-
-h5 a:link, h5 a:visited, h5 a:active {
-	padding: 0;
-	text-decoration: none;
-}
+h1 { font-size: 2em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1.1em; }
+h5, h6 { font-size: 1em; }
 
 ul {
 	list-style: none;
 	padding: 0;
 }
 
+ul,
 dl {
 	margin: 0;
 }
@@ -116,66 +112,46 @@ dd {
 
 /* main layout
 ----------------------------------------------------------*/
-.content-wrapper {
-	margin: 0 auto;
-	max-width: 960px;
-	padding-top: 0.5em;
-}
-
-#body {
-	background-color: #efeeef;
-	clear: both;
-	padding-bottom: 35px;
-}
-
-.main-content {
-	background: url("images/accent.png") no-repeat;
-	padding-left: 10px;
-	padding-top: 30px;
-}
-
-.featured + .main-content {
-	background: url("images/heroAccent.png") no-repeat;
-}
-
-header .content-wrapper {
-	padding-top: 20px;
-}
-
+header,
+#body,
 footer {
-	clear: both;
-	background-color: #e2e2e2;
-	font-size: .8em;
-	height: 100px;
+	margin: 0 auto;
+	max-width: 60em;
 }
+
+body > header { background: #fff; }
+#body { background-color: #efeeef; }
+footer { background: #e2e2e2; }
+
+.content-wrapper { padding: 1.5em 3em 0.5em 2em; }
+footer .content-wrapper { font-size: .8em; padding-bottom: 1.5em; }
+
+.main-content { background: url("images/accent.png") no-repeat 1em 0; }
+.featured + .main-content { background-image: url("images/heroAccent.png"); }
 
 
 /* site title
 ----------------------------------------------------------*/
 .site-title {
 	color: #c8c8c8;
-	font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+	font-family: "Courier New", Courier, monospace;
 	font-size: 2.3em;
 	margin: 0;
 }
 
-.site-title a, .site-title a:hover, .site-title a:active {
+.site-title a {
 	background: none;
 	color: #c8c8c8;
-	outline: none;
 	text-decoration: none;
 }
-
 
 /* login
 ----------------------------------------------------------*/
 #login {
 	display: block;
 	font-size: .85em;
-	margin: 0 0 10px;
-	text-align: right;
 }
-
+/*
 #login a {
 	background-color: #d3dce0;
 	margin-left: 10px;
@@ -199,86 +175,50 @@ footer {
 	display: inline;
 	list-style: none;
 }
-
+*/
 
 /* menu
 ----------------------------------------------------------*/
 ul#menu {
 	font-size: 1.3em;
-	font-weight: 600;
-	margin: 0 0 5px;
-	padding: 0;
 	text-align: right;
 }
 
 ul#menu li {
-	display: inline;
+	display: inline-block;
 	list-style: none;
-	padding-left: 15px;
+	padding-left: 0.5em;
 }
 
-ul#menu li a {
-	background: none;
-	color: #999;
-	text-decoration: none;
-}
+ul#menu li a { color: #999; }
 
 ul#menu li a:hover {
 	color: #333;
-	text-decoration: none;
 }
 
 
 /* page elements
 ----------------------------------------------------------*/
 /* featured */
-.featured {
-	background-color: #fff;
-}
+.featured { background-color: #fff; }
 
 .featured .content-wrapper {
 	background-color: #7ac0da;
 	color: #3e5667;
-	padding: 20px 40px 30px 40px;
 }
 
-.featured hgroup.title h1, .featured hgroup.title h2 {
-	color: #fff;
-}
+.featured hgroup.title h1, .featured hgroup.title h2 { color: #fff; }
 
-.featured p {
-	font-size: 1.1em;
-}
+.featured p { font-size: 1.1em; }
 
 /* page titles */
-hgroup.title {
-	margin-bottom: 10px;
-}
+hgroup.title { margin-bottom: 10px; }
 
-hgroup.title h1, hgroup.title h2 {
-	display: inline;
-}
+hgroup.title h1, hgroup.title h2 { display: inline; }
 
 hgroup.title h2 {
 	font-weight: normal;
 	margin-left: 3px;
-}
-
-/* features */
-section.feature {
-	width: 300px;
-	float: left;
-	padding: 10px;
-}
-
-/* ordered list */
-ol.round {
-	padding-left: 1.2em;
-}
-
-ol.round li {
-	margin: 0.5em 0;
-	padding-left: 0.5em;
 }
 
 /* content */
@@ -293,6 +233,7 @@ aside {
 }
 
 /* login page */
+/*
 #loginForm {
 	border-right: solid 2px #c8c8c8;
 	float: left;
@@ -343,6 +284,7 @@ aside {
 #logoutForm {
 	display: inline;
 }
+*/
 
 /* forms */
 fieldset {
@@ -353,15 +295,6 @@ fieldset {
 
 fieldset legend {
 	display: none;
-}
-
-fieldset ol {
-	padding: 0;
-	list-style: none;
-}
-
-fieldset ol li {
-	padding-bottom: 5px;
 }
 
 label {
@@ -410,14 +343,6 @@ button {
 	padding: 7px;
 	margin-right: 8px;
 	width: auto;
-}
-
-td input[type="submit"],
-td input[type="button"],
-td button {
-	font-size: 1em;
-	padding: 4px;
-	margin-right: 4px;
 }
 
 /* info and errors */
@@ -477,6 +402,7 @@ input[type="checkbox"].input-validation-error {
 
 /* tables
 ----------------------------------------------------------*/
+/*
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -535,7 +461,7 @@ td {
 tr.pager td {
 	padding: 0 0.25em 0 0;
 }
-
+*/
 
 /********************
 *   Mobile Styles   *
@@ -544,8 +470,7 @@ tr.pager td {
 
 	/* header
     ----------------------------------------------------------*/
-	header .float-left,
-	header .float-right {
+	header .site-title {
 		float: none;
 	}
 
@@ -625,20 +550,6 @@ tr.pager td {
 		width: 100%;
 	}
 
-	/* features */
-	section.feature {
-		float: none;
-		padding: 10px;
-		width: auto;
-	}
-
-	section.feature img {
-		color: #999;
-		content: attr(alt);
-		font-size: 1.5em;
-		font-weight: 600;
-	}
-
 	/* forms */
 	input {
 		width: 90%;
@@ -662,13 +573,6 @@ tr.pager td {
 		width: auto;
 	}
 
-
-	/* footer
-    ----------------------------------------------------------*/
-	footer .float-left,
-	footer .float-right {
-		float: none;
-	}
 
 	footer {
 		text-align: center;

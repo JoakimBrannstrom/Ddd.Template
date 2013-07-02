@@ -10,29 +10,29 @@
     </head>
     <body>
         <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("DDD Template", "Index", "Home")</p>
+            <div class="content-wrapper clearfix">
+                <div class="site-title">
+                    @Html.ActionLink("DDD Template", "Index", "Home")
                 </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
+
+                <section id="login">
+                    @Html.Partial("_LoginPartial")
+                </section>
+
+	            <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
 	    <div id="body">
             @RenderSection("featured", required: false)
 
-		    <section class="content-wrapper main-content clear-fix">
+		    <section class="content-wrapper main-content clearfix">
                 @RenderBody()
             </section>
         </div>
