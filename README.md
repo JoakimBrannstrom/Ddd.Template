@@ -1,4 +1,4 @@
-DocumentStation
+DDD Template
 ===============
 
-Store your documents and make them searchable
+A flying start for your DDD/Event sourcing/MVC-project
