@@ -18,16 +18,14 @@ namespace Ddd.Template.Domain.CommandHandlers
 		{
 			Console.WriteLine("{0} - {1} command received.", DateTime.Now, command.GetType().Name);
 
-			var user = new Visitor(command.AggregateId, command.Created, command.Platform, command.UserAgent,
+			var visitor = new Visitor(command.AggregateId, command.Created, command.Platform, command.UserAgent,
 									command.UserHostAddress, command.UserHostName, command.UserLanguages);
 
-			Repository.Save(command.CommandId, user, 0, Guid.Empty);
+			Repository.Save(command.CommandId, visitor, 0, Guid.Empty);
 		}
 
 		public void Handle(AddVisitorLogin command)
 		{
-			Console.WriteLine("{0} - {1} command received.", DateTime.Now, command.GetType().Name);
-
 			HandleCommandOnExistingAggregate(command, item => item.Login(command.UserId));
 		}
 	}

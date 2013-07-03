@@ -22,7 +22,7 @@ namespace Ddd.Template.Web.Scaffolding.Installers
 
 			configure
 				.CastleWindsorBuilder(container)
-				.XmlSerializer()
+				.JsonSerializer()
 				.MsmqTransport()
 				.IsTransactional(false)
 				.PurgeOnStartup(false)
@@ -38,7 +38,7 @@ namespace Ddd.Template.Web.Scaffolding.Installers
 			configuration
 				.DefiningCommandsAs(commandTypeDefinition)
 				.DefiningEventsAs(eventTypeDefinition)
-				.DefiningEncryptedPropertiesAs(p => p.Name.StartsWith("Encrypted"));
+				; //.DefiningEncryptedPropertiesAs(p => p.Name.StartsWith("Encrypted"));
 		}
 	}
 }

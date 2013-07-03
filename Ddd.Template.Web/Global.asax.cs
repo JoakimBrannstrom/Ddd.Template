@@ -8,7 +8,6 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
-using Ddd.Template.Contracts.Commands;
 using Ddd.Template.Contracts.Commands.Visitor;
 using Ddd.Template.Web.Scaffolding;
 using Ddd.Template.Web.Scaffolding.Configuration;
@@ -31,10 +30,6 @@ namespace Ddd.Template.Web
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
 			AuthConfig.RegisterAuth();
-
-			Container
-				.Resolve<IBus>()
-				.Send(new AddDocument { Id = Guid.NewGuid().ToString(), UserId = Guid.NewGuid().ToString() });
 		}
 
 		protected void Application_End()

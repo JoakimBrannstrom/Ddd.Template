@@ -7,13 +7,14 @@ using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using Ddd.Template.Contracts;
+using Ddd.Template.Domain.CommandHandlers;
 using NServiceBus;
 using Raven.Client;
 using Raven.Client.Document;
 using Raven.Client.Extensions;
 using log4net.Config;
 
-namespace Ddd.Template.Server.Scaffolding
+namespace Ddd.Template.Server.Bootstrap
 {
 	public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, IWantCustomInitialization
 	{
@@ -23,7 +24,7 @@ namespace Ddd.Template.Server.Scaffolding
 
 			SetNServiceBusLoggingLibrary();
 
-			Configure configuration = GetConfigurationInstance();
+			var configuration = GetConfigurationInstance();
 
 			AddUnbotrusiveConventions(configuration);
 
@@ -34,7 +35,7 @@ namespace Ddd.Template.Server.Scaffolding
 			container.Install(FromAssembly.This());
 		}
 
-		private IWindsorContainer BootstrapContainer()
+		private static IWindsorContainer BootstrapContainer()
 		{
 			var container = new WindsorContainer();
 
@@ -48,7 +49,7 @@ namespace Ddd.Template.Server.Scaffolding
 			return container;
 		}
 
-		private void SetNServiceBusLoggingLibrary()
+		private static void SetNServiceBusLoggingLibrary()
 		{
 			// http://nservicebus.com/Logging.aspx#customized
 			SetLoggingLibrary.Log4Net(() => XmlConfigurator
@@ -57,34 +58,37 @@ namespace Ddd.Template.Server.Scaffolding
 
 		protected virtual Configure GetConfigurationInstance()
 		{
-			return Configure.With();
+			return Configure
+					.With(new[] { typeof(CommandHandlerBase<>).Assembly });
 		}
 
 		private static void AddUnbotrusiveConventions(Configure configuration)
 		{
-			Func<Type, bool> commandTypeDefinition = MessageConfigurator.GetMessageTypeDefinition(MessageType.Command);
-			Func<Type, bool> eventTypeDefinition = MessageConfigurator.GetMessageTypeDefinition(MessageType.Event);
+			var commandTypeDefinition = MessageConfigurator.GetMessageTypeDefinition(MessageType.Command);
+			var eventTypeDefinition = MessageConfigurator.GetMessageTypeDefinition(MessageType.Event);
 
 			configuration
 				.DefiningCommandsAs(commandTypeDefinition)
 				.DefiningEventsAs(eventTypeDefinition)
-				.DefiningEncryptedPropertiesAs(p => p.Name.StartsWith("Encrypted"));
+				;//.DefiningEncryptedPropertiesAs(p => p.Name.StartsWith("Encrypted"));
 		}
 
-		private void ConfigureNServiceBus(Configure configuration, IWindsorContainer container)
+		private static void ConfigureNServiceBus(Configure configuration, IWindsorContainer container)
 		{
 			configuration
 				.DefineEndpointName("Ddd.Template.Domain")
 				.CastleWindsorBuilder(container)
-				.RavenPersistence("NServiceBus.Persistence", "Ddd.Template.NServiceBus.domain")
-				.RunTimeoutManager()
-				.UseRavenTimeoutPersister()
-				.XmlSerializer()
+				.JsonSerializer()
 				.MsmqTransport()
 				.IsTransactional(true)
 				.PurgeOnStartup(false)
+				.RavenPersistence("NServiceBus.Persistence", "Ddd.Template.NServiceBus.domain")
+				.RunTimeoutManager()
+				.UseRavenTimeoutPersister()
+				.RavenSubscriptionStorage()
 				.UnicastBus()
-				.SendOnly();
+				.CreateBus()
+				.Start();
 		}
 
 		protected virtual void RegisterDocumentStore(IWindsorContainer container)
@@ -97,10 +101,10 @@ namespace Ddd.Template.Server.Scaffolding
 
 			store.Initialize();
 
-			string domainDbName = ConfigurationManager.AppSettings["RavenDbName"];
+			var domainDbName = ConfigurationManager.AppSettings["RavenDbName"];
 			store.DatabaseCommands.EnsureDatabaseExists(domainDbName);
 
-			string nServiceBusDbName = ConfigurationManager.AppSettings["NServiceBus.Persistence.RavenDbName"];
+			var nServiceBusDbName = ConfigurationManager.AppSettings["NServiceBus.Persistence.RavenDbName"];
 			store.DatabaseCommands.EnsureDatabaseExists(nServiceBusDbName);
 
 			container.Register(Component.For<IDocumentStore>().Instance(store));

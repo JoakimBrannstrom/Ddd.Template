@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AggregateRoot.cs" />
-    <Compile Include="Commands\AddDocument.cs" />
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\Visitor\AddVisitor.cs" />
     <Compile Include="Commands\Visitor\AddVisitorLogin.cs" />

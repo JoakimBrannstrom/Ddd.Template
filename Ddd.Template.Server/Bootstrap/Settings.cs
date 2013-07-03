@@ -1,4 +1,4 @@
-namespace Ddd.Template.Server.Scaffolding
+namespace Ddd.Template.Server.Bootstrap
 {
 	public static class Settings
 	{
