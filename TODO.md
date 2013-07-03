@@ -1,28 +1,24 @@
 -------------------------------------------
 ##Now
-###Server:
-* Add indexing of documents
-	- nuget package for IFilter-wrapper
+
+###Denormalizer:
+* Add denormalizer
+	- Create "current" domain view
 
 -------------------------------------------
 ##Next
-###Client:
-* Upload document(s)
+
+###Denormalizer-rebuilder:
+* Rebuild domain view(s)
 
 -------------------------------------------
 ##Later
 
 ###Common:
-* Contracts
-	- Message for uploaded document
-	- Message for uploaded documents (a range of related documents)
-	- Message for viewed document
-
 
 ###Client:
-* Upload document(s)
-* Add metadata
-* OpenId Login
+* Open Id login / OAuth login
+
 
 -------------------------------------------
 

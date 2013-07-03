@@ -15,8 +15,6 @@ namespace Ddd.Template.Domain.CommandHandlers
 
 		protected void HandleCommandOnExistingAggregate(Command command, Action<T> action)
 		{
-			Console.WriteLine("{0} - {1} command received.", DateTime.Now, command.GetType().Name);
-
 			var aggregate = Repository.GetById(command.AggregateId);
 			action(aggregate);
 

@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0075D578-58A0-4E8E-BC89-F13FBCB10A66}</ProjectGuid>
+    <ProjectGuid>{8CB19B81-56AB-4C32-B4C5-C7625A310B7D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ddd.Template.Server.Tests</RootNamespace>
-    <AssemblyName>Ddd.Template.Server.Tests</AssemblyName>
+    <RootNamespace>Ddd.Template.Denormalizer.Tests</RootNamespace>
+    <AssemblyName>Ddd.Template.Denormalizer.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -37,17 +37,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EventStore">
-      <HintPath>..\packages\EventStore.3.2.0.28\lib\net40\EventStore.dll</HintPath>
-    </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NServiceBus">
       <HintPath>..\packages\NServiceBus.Interfaces.3.3.8\lib\net40\NServiceBus.dll</HintPath>
@@ -83,39 +78,32 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Aggregates\Visitor\WhenAddVisitorLogin.cs" />
-    <Compile Include="Aggregates\Visitor\WhenVisitorIsAdded.cs" />
-    <Compile Include="CommandTestFixture.cs" />
-    <Compile Include="Contracts\AllCommandHandlerMethodsShouldHaveAtleastOneTest.cs" />
-    <Compile Include="Contracts\AllCommandsShouldHaveAtleastOneHandler.cs" />
-    <Compile Include="Contracts\MessagesAreSerializable.cs" />
-    <Compile Include="Contracts\Serialization\SerializationTest.cs" />
-    <Compile Include="Contracts\Serialization\Visitor\AddVisitorHasSerializableProperties.cs" />
-    <Compile Include="Contracts\Serialization\Visitor\AddVisitorLoginHasSerializableProperties.cs" />
-    <Compile Include="Contracts\Serialization\Visitor\VisitorCommandHasSerializableProperties.cs" />
+    <Compile Include="Aggregates\Visitor\WhenVisitorLoggedIn.cs" />
+    <Compile Include="Aggregates\Visitor\WhenVisitorWasAdded.cs" />
+    <Compile Include="Contracts\AllEventsHaveAtleastOneHandler.cs" />
+    <Compile Include="EventTestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scaffolding\DependencyConfigurator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ddd.Template.Contracts\Ddd.Template.Contracts.csproj">
-      <Project>{f5b6dc24-bcfe-46e6-9041-c45ae0a9b761}</Project>
+      <Project>{F5B6DC24-BCFE-46E6-9041-C45AE0A9B761}</Project>
       <Name>Ddd.Template.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Ddd.Template.Domain\Ddd.Template.Domain.csproj">
-      <Project>{d286f980-3634-4f6c-9b2e-334d2a44d07b}</Project>
-      <Name>Ddd.Template.Domain</Name>
+    <ProjectReference Include="..\Ddd.Template.Denormalizer.Projections\Ddd.Template.Denormalizer.Projections.csproj">
+      <Project>{b829df8c-383e-44fd-be25-24eb194d0f72}</Project>
+      <Name>Ddd.Template.Denormalizer.Projections</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Ddd.Template.Server\Ddd.Template.Server.csproj">
-      <Project>{7e96ee24-2b22-492c-b600-32cb0f2e0289}</Project>
-      <Name>Ddd.Template.Server</Name>
+    <ProjectReference Include="..\Ddd.Template.Denormalizer\Ddd.Template.Denormalizer.csproj">
+      <Project>{470AAC0F-595F-4432-A904-121824204454}</Project>
+      <Name>Ddd.Template.Denormalizer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ddd.Template.Test.Contrib\Ddd.Template.Test.Contrib.csproj">
-      <Project>{0a38d967-ce96-40d6-b87d-9fdd123fcd2c}</Project>
+      <Project>{0A38D967-CE96-40D6-B87D-9FDD123FCD2C}</Project>
       <Name>Ddd.Template.Test.Contrib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

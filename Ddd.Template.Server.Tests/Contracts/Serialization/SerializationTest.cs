@@ -8,10 +8,10 @@ using Newtonsoft.Json;
 namespace Ddd.Template.Server.Tests.Contracts.Serialization
 {
 	[TestClass]
-	public abstract class CommandHasSerializableProperties<T> where T : Command
+	public abstract class SerializationTest<T> where T : Command
 	{
 		[TestMethod]
-		public void AllCommandsShouldHaveTheSerializableAttributeAssigned()
+		public void AssertPropertiesOnSerializedObject()
 		{
 			// Arrange
 			var expected = GetExpected();

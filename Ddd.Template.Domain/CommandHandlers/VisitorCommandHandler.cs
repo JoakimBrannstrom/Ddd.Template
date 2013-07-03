@@ -16,10 +16,8 @@ namespace Ddd.Template.Domain.CommandHandlers
 
 		public void Handle(AddVisitor command)
 		{
-			Console.WriteLine("{0} - {1} command received.", DateTime.Now, command.GetType().Name);
-
 			var visitor = new Visitor(command.AggregateId, command.Created, command.Platform, command.UserAgent,
-									command.UserHostAddress, command.UserHostName, command.UserLanguages);
+										command.UserHostAddress, command.UserHostName, command.UserLanguages);
 
 			Repository.Save(command.CommandId, visitor, 0, Guid.Empty);
 		}
