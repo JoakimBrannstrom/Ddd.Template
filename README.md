@@ -1,5 +1,4 @@
-DDD Template
-===============
+#DDD Template
 
 A flying start for your DDD/Event sourcing/Responsive web-project
 
