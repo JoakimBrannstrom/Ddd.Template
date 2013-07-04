@@ -200,7 +200,7 @@
     <Compile Include="Scaffolding\Installers\LoggerInstaller.cs" />
     <Compile Include="Scaffolding\Installers\NServiceBusInstaller.cs" />
     <Compile Include="Scaffolding\Installers\RavenDbInstaller.cs" />
-    <Compile Include="Scaffolding\RavenIndexes\AllTagsIndex.cs" />
+    <Compile Include="Scaffolding\RavenIndexes\AllVisitorsIndex.cs" />
     <Compile Include="Scaffolding\Settings.cs" />
     <Compile Include="Scaffolding\WindsorControllerFactory.cs" />
   </ItemGroup>
@@ -240,6 +240,10 @@
     <ProjectReference Include="..\Ddd.Template.Contracts\Ddd.Template.Contracts.csproj">
       <Project>{f5b6dc24-bcfe-46e6-9041-c45ae0a9b761}</Project>
       <Name>Ddd.Template.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ddd.Template.Denormalizer.Projections\Ddd.Template.Denormalizer.Projections.csproj">
+      <Project>{b829df8c-383e-44fd-be25-24eb194d0f72}</Project>
+      <Name>Ddd.Template.Denormalizer.Projections</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

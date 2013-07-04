@@ -49,21 +49,7 @@ namespace Ddd.Template.Web
 
 		protected void Session_Start(object sender, EventArgs e)
 		{
-			var request = GetHttpRequest();
-			var userLanguages = request.UserLanguages;
-
-			var visitor = new AddVisitor
-			{
-				AggregateId = Guid.NewGuid(),
-				CommandId = Guid.NewGuid(),
-				Created = DateTime.UtcNow,
-				OriginalVersion = 0,
-				UserAgent = request.UserAgent,
-				UserHostAddress = request.UserHostAddress,
-				UserHostName = request.UserHostName,
-				Platform = request.Browser.Platform,
-				UserLanguages = userLanguages == null ? new List<string>() : userLanguages.ToList()
-			};
+			var visitor = CreateVisitor(GetHttpRequest());
 
 			var session = GetSession();
 			session.Add("VisitorId", visitor.AggregateId);
@@ -71,6 +57,37 @@ namespace Ddd.Template.Web
 
 			var bus = Container.Resolve<IBus>();
 			bus.Send(visitor);
+
+			// DebugCreateVisitors();
+		}
+
+		private void DebugCreateVisitors()
+		{
+			var visitors = new List<AddVisitor>();
+			var request = GetHttpRequest();
+			for (var i = 0; i < 500; i++)
+				visitors.Add(CreateVisitor(request));
+
+			var bus = Container.Resolve<IBus>();
+			bus.Send(visitors.ToArray());
+		}
+
+		private AddVisitor CreateVisitor(HttpRequestBase request)
+		{
+			var userLanguages = request.UserLanguages;
+
+			return new AddVisitor
+					{
+						AggregateId = Guid.NewGuid(),
+						CommandId = Guid.NewGuid(),
+						Created = DateTime.UtcNow,
+						OriginalVersion = 0,
+						UserAgent = request.UserAgent,
+						UserHostAddress = request.UserHostAddress,
+						UserHostName = request.UserHostName,
+						Platform = request.Browser.Platform,
+						UserLanguages = userLanguages == null ? new List<string>() : userLanguages.ToList()
+					};
 		}
 
 		protected virtual HttpSessionStateBase GetSession()

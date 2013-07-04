@@ -10,8 +10,6 @@ namespace Ddd.Template.Server
 										IHandleMessages<Command>,
 										IHandleMessages<Event>
 	{
-		public IBus Bus { get; set; }
-
 		public void Run()
 		{
 			if (!Environment.UserInteractive)
@@ -54,12 +52,15 @@ namespace Ddd.Template.Server
 			Handle(message, "Event");
 		}
 
+		private static int _messageCounter = 0;
 		private static void Handle(object message, string type)
 		{
 			if (!Environment.UserInteractive)
 				return;
 
-			Console.WriteLine("{0} - {1} received, Type: '{2}'", DateTime.Now, type, message.GetType().Name);
+			_messageCounter++;
+			Console.WriteLine("{0} - {1} received, Type: '{2}', message nr: {3}", 
+								DateTime.Now, type, message.GetType().Name, _messageCounter);
 		}
 	}
 }

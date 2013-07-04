@@ -42,7 +42,7 @@ namespace Ddd.Template.Server.Tests.Aggregates.Visitor
 			}
 
 			[TestMethod]
-			public void ThePublishedEventShouldBeLinkWasVisited()
+			public void ThePublishedEventShouldBeVisitorLoggedIn()
 			{
 				VerifyThatEventPublishedOnTheBusIsOfCorrectType<VisitorLoggedIn>();
 			}

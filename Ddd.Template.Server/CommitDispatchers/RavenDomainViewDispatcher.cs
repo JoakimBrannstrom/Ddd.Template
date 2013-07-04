@@ -1,4 +1,6 @@
 ﻿using Ddd.Template.Contracts.Events;
+using Ddd.Template.Contracts.Events.Visitor;
+using Ddd.Template.Domain.Projections;
 using Raven.Client;
 
 namespace Ddd.Template.Server.CommitDispatchers
@@ -14,38 +16,24 @@ namespace Ddd.Template.Server.CommitDispatchers
 
 		public void Publish(Event @event)
 		{
-			/*
-			var linkWasAdded = @event as LinkWasAdded;
-			if (linkWasAdded != null)
+			var visitorLoggedIn = @event as VisitorLoggedIn;
+			if (visitorLoggedIn != null)
 			{
-				StoreLink(linkWasAdded);
-			}
-
-			var userWasAdded = @event as UserWasAdded;
-			if (userWasAdded != null)
-			{
-				StoreUser(userWasAdded);
-			}
-			*/
-		}
-		/*
-		private void StoreLink(LinkWasAdded linkWasAdded)
-		{
-			using (var session = _store.OpenSession())
-			{
-				session.Store(new ExistingLink { Id = linkWasAdded.AggregateId, Url = linkWasAdded.Url });
-				session.SaveChanges();
+				StoreLink(visitorLoggedIn);
 			}
 		}
 
-		private void StoreUser(UserWasAdded userWasAdded)
+		private void StoreLink(VisitorLoggedIn loginInfo)
 		{
 			using (var session = _store.OpenSession())
 			{
-				session.Store(new ExistingUser { Id = userWasAdded.AggregateId, ClaimedIdentifier = userWasAdded.ClaimedIdentifier });
+				session.Store(new UserLogin
+								{
+									Id = loginInfo.AggregateId,
+									ClaimedIdentifier = loginInfo.ClaimedIdentifier
+								});
 				session.SaveChanges();
 			}
 		}
-		*/
 	}
 }

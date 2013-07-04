@@ -32,8 +32,8 @@ namespace Ddd.Template.Denormalizer.Tests.Aggregates.Visitor
 		[TestMethod]
 		public void TheVisitorProjectionSholdHaveCorrectPlatform()
 		{
-			var link = GetProjectionFromDomainView<Projections.Visitor>(AggregateId);
-			Assert.AreEqual(Platform, link.Platform);
+			var visitor = GetProjectionFromDomainView<Projections.Visitor>(AggregateId);
+			Assert.AreEqual(Platform, visitor.Platform);
 		}
 
 		[TestMethod]

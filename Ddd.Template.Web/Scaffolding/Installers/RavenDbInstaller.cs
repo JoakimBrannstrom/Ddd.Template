@@ -78,8 +78,8 @@ namespace Ddd.Template.Web.Scaffolding.Installers
 			// store.Conventions.DocumentKeyGenerator = a => Guid.NewGuid().ToString();
 			// store.Conventions.MaxNumberOfRequestsPerSession = 200;
 
-			// Create all indexes that is defined in the same assembly as 'AllTagsIndex'
-			IndexCreation.CreateIndexes(typeof(AllTagsIndex).Assembly, store);
+			// Create all indexes that is defined in the same assembly as 'AllVisitorsIndex'
+			IndexCreation.CreateIndexes(typeof(AllVisitorsIndex).Assembly, store);
 			/*
 			using (var session = store.OpenSession())
 			{

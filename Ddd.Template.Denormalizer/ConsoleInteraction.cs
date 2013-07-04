@@ -33,12 +33,15 @@ namespace Ddd.Template.Denormalizer
 			Console.WriteLine("Shutting down...");
 		}
 
+		private static int _messageCounter = 0;
 		public void Handle(Event message)
 		{
 			if (!Environment.UserInteractive)
 				return;
 
-			Console.WriteLine("{0} - Event received, Type: '{1}'", DateTime.Now, message.GetType().Name);
+			_messageCounter++;
+			Console.WriteLine("{0} - Event received.", DateTime.Now);
+			Console.WriteLine("\tMessage nr: {0}", _messageCounter);
 			Console.WriteLine("\tEvent type: '{0}'", message.GetType().Name);
 			Console.WriteLine("\tAggregateId: '{0}'", message.AggregateId);
 			Console.WriteLine("\tVersion: '{0}'", message.Version);
