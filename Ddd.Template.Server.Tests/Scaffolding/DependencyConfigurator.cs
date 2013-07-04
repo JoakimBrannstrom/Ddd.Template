@@ -15,7 +15,7 @@ using Raven.Client.Embedded;
 
 namespace Ddd.Template.Server.Tests.Scaffolding
 {
-	public class DependencyConfigurator<TAggregateRoot, TCommand, TCommandHandler> : IDisposable
+	public sealed class DependencyConfigurator<TAggregateRoot, TCommand, TCommandHandler> : IDisposable
 		where TAggregateRoot : AggregateRoot, new()
 		where TCommand : Command
 		where TCommandHandler : IHandleMessages<TCommand>

@@ -10,7 +10,7 @@ using Raven.Client.Embedded;
 
 namespace Ddd.Template.Denormalizer.Tests.Scaffolding
 {
-	public class DependencyConfigurator<TEvent, TEventHandler> : IDisposable
+	public sealed class DependencyConfigurator<TEvent, TEventHandler> : IDisposable
 		where TEvent : Event
 		where TEventHandler : IHandleMessages<TEvent>
 	{
