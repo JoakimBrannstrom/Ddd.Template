@@ -65,7 +65,7 @@ namespace Ddd.Template.Web
 		{
 			var visitors = new List<AddVisitor>();
 			var request = GetHttpRequest();
-			for (var i = 0; i < 500; i++)
+			for (var i = 0; i < 1000; i++)
 				visitors.Add(CreateVisitor(request));
 
 			var bus = Container.Resolve<IBus>();

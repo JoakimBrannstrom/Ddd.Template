@@ -3,21 +3,19 @@
 
 ###Denormalizer:
 * Add denormalizer
-	- Create "current" domain view
+	- Create "current" domain view, including raven indexes
 
 -------------------------------------------
 ##Next
 
-###Denormalizer-rebuilder:
-* Rebuild domain view(s)
+###Client:
+* Open Id login / OAuth login
 
 -------------------------------------------
 ##Later
 
 ###Common:
 
-###Client:
-* Open Id login / OAuth login
 
 
 -------------------------------------------
