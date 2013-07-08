@@ -30,7 +30,7 @@ namespace Ddd.Template.Server.Tests
 	{
 		private DependencyConfigurator<TAggregateRoot, TCommand, TCommandHandler> _dependencyConfigurator;
 
-		protected Exception LastException;
+		private Exception _lastException;
 		private List<Event> _publishedMessages;
 
 		protected Guid AggregateId = Guid.NewGuid();
@@ -146,15 +146,15 @@ namespace Ddd.Template.Server.Tests
 				if (expectedExceptionType == null || expectedExceptionType != exc.GetType())
 					throw;
 
-				LastException = exc;
+				_lastException = exc;
 			}
 		}
 
 		protected void VerifyLastException<T>()
 		{
 			var expectedType = typeof(T);
-			Assert.IsNotNull(LastException, "We should have an " + expectedType.Name + " by now...");
-			Assert.AreEqual(expectedType, LastException.GetType(), "Wrong type of exception! Expected " + expectedType.Name);
+			Assert.IsNotNull(_lastException, "We should have an " + expectedType.Name + " by now...");
+			Assert.AreEqual(expectedType, _lastException.GetType(), "Wrong type of exception! Expected " + expectedType.Name);
 		}
 
 		protected void VerifyThatNoEventsWasPublishedOnTheBus()

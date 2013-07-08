@@ -2392,9 +2392,9 @@ select new { m, m.NbLinesOfCode }
 // introduced with .NET v4.0.]]></Query>
     </Group>
     <Group Name="Naming Conventions" Active="True" ShownInReport="False">
-      <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Instance fields should be prefixed with a 'm_'</Name>
+      <Query Active="True" DisplayList="True" DisplayStat="True" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Instance fields should be prefixed with a '_'</Name>
 warnif count > 0 from f in Application.Fields where 
-  !f.NameLike (@"^m_") && 
+  !f.NameLike (@"^_") && 
   !f.IsStatic && 
   !f.IsLiteral && 
   !f.IsGeneratedByCompiler  && 
