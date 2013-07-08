@@ -2,12 +2,12 @@
 using System.Diagnostics;
 using Ddd.Template.Contracts.Events;
 using Ddd.Template.Contracts.Events.Visitor;
-using Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery;
+using Ddd.Template.Projections.Rebuilder.HandlerDiscovery;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NServiceBus;
 
-namespace Ddd.Template.Denormalizer.Rebuilder.Tests.HandlerDiscovery
+namespace Ddd.Template.Projections.Rebuilder.Tests.HandlerDiscovery
 {
 	[TestClass]
 	public sealed class HandlerInvokerTests

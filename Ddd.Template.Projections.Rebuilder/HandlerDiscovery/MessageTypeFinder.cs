@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NServiceBus;
 
-namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
+namespace Ddd.Template.Projections.Rebuilder.HandlerDiscovery
 {
 	internal static class MessageTypeFinder
 	{

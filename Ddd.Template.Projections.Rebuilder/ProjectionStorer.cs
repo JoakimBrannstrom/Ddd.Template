@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Ddd.Template.Projections;
 using Raven.Client;
 
-namespace Ddd.Template.Denormalizer.Rebuilder
+namespace Ddd.Template.Projections.Rebuilder
 {
 	internal sealed class ProjectionStorer
 	{

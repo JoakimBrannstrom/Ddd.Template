@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using EventStore;
 
-namespace Ddd.Template.Denormalizer.Rebuilder
+namespace Ddd.Template.Projections.Rebuilder
 {
 	internal interface IEventStorage
 	{

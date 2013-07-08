@@ -36,9 +36,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Projections", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Denormalizer.Tests", "Ddd.Template.Denormalizer.Tests\Ddd.Template.Denormalizer.Tests.csproj", "{8CB19B81-56AB-4C32-B4C5-C7625A310B7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Denormalizer.Rebuilder", "Ddd.Template.Denormalizer.Rebuilder\Ddd.Template.Denormalizer.Rebuilder.csproj", "{567AEB4C-98A8-41DD-874C-98C4409A231C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Projections.Rebuilder", "Ddd.Template.Projections.Rebuilder\Ddd.Template.Projections.Rebuilder.csproj", "{567AEB4C-98A8-41DD-874C-98C4409A231C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Denormalizer.Rebuilder.Tests", "Ddd.Template.Denormalizer.Rebuilder.Tests\Ddd.Template.Denormalizer.Rebuilder.Tests.csproj", "{96DDD2AC-D73F-4295-8135-1D458D4B2552}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Projections.Rebuilder.Tests", "Ddd.Template.Projections.Rebuilder.Tests\Ddd.Template.Projections.Rebuilder.Tests.csproj", "{96DDD2AC-D73F-4295-8135-1D458D4B2552}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

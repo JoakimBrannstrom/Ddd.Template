@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using NServiceBus;
 
-namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
+namespace Ddd.Template.Projections.Rebuilder.HandlerDiscovery
 {
 	internal sealed class HandlerMethodMapper
 	{

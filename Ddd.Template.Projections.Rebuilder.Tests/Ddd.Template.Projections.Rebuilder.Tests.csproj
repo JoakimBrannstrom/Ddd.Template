@@ -6,8 +6,8 @@
     <ProjectGuid>{96DDD2AC-D73F-4295-8135-1D458D4B2552}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ddd.Template.Denormalizer.Rebuilder.Tests</RootNamespace>
-    <AssemblyName>Ddd.Template.Denormalizer.Rebuilder.Tests</AssemblyName>
+    <RootNamespace>Ddd.Template.Projections.Rebuilder.Tests</RootNamespace>
+    <AssemblyName>Ddd.Template.Projections.Rebuilder.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -91,9 +91,9 @@
       <Project>{B829DF8C-383E-44FD-BE25-24EB194D0F72}</Project>
       <Name>Ddd.Template.Projections</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Ddd.Template.Denormalizer.Rebuilder\Ddd.Template.Denormalizer.Rebuilder.csproj">
+    <ProjectReference Include="..\Ddd.Template.Projections.Rebuilder\Ddd.Template.Projections.Rebuilder.csproj">
       <Project>{567AEB4C-98A8-41DD-874C-98C4409A231C}</Project>
-      <Name>Ddd.Template.Denormalizer.Rebuilder</Name>
+      <Name>Ddd.Template.Projections.Rebuilder</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ddd.Template.Denormalizer\Ddd.Template.Denormalizer.csproj">
       <Project>{470AAC0F-595F-4432-A904-121824204454}</Project>

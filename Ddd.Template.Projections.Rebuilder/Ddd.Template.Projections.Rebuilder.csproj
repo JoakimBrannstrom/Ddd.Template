@@ -7,8 +7,8 @@
     <ProjectGuid>{567AEB4C-98A8-41DD-874C-98C4409A231C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ddd.Template.Denormalizer.Rebuilder</RootNamespace>
-    <AssemblyName>Ddd.Template.Denormalizer.Rebuilder</AssemblyName>
+    <RootNamespace>Ddd.Template.Projections.Rebuilder</RootNamespace>
+    <AssemblyName>Ddd.Template.Projections.Rebuilder</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>

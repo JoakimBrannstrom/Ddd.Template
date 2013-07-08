@@ -5,13 +5,12 @@ using System.Linq;
 using Ddd.Template.Contracts.Events;
 using Ddd.Template.Contracts.Events.Visitor;
 using Ddd.Template.Denormalizer.Raven;
-using Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery;
-using Ddd.Template.Projections;
+using Ddd.Template.Projections.Rebuilder.HandlerDiscovery;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Raven.Client.Embedded;
 
-namespace Ddd.Template.Denormalizer.Rebuilder.Tests
+namespace Ddd.Template.Projections.Rebuilder.Tests
 {
 	[TestClass]
 	public sealed class ProjectionsRebuilderTests

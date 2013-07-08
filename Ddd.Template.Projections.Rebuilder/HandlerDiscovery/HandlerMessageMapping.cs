@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
+namespace Ddd.Template.Projections.Rebuilder.HandlerDiscovery
 {
 	internal sealed class HandlerMessageMapping
 	{

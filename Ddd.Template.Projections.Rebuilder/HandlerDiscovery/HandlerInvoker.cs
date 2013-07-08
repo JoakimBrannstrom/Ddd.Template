@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
+namespace Ddd.Template.Projections.Rebuilder.HandlerDiscovery
 {
 	public sealed class HandlerInvoker
 	{

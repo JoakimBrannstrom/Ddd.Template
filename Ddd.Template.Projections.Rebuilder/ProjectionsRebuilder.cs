@@ -1,6 +1,6 @@
-﻿using Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery;
+﻿using Ddd.Template.Projections.Rebuilder.HandlerDiscovery;
 
-namespace Ddd.Template.Denormalizer.Rebuilder
+namespace Ddd.Template.Projections.Rebuilder
 {
 	internal sealed class ProjectionsRebuilder
 	{

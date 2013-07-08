@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Ddd.Template.Projections;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Raven.Client.Embedded;
 
-namespace Ddd.Template.Denormalizer.Rebuilder.Tests
+namespace Ddd.Template.Projections.Rebuilder.Tests
 {
 	[TestClass]
 	public sealed class ProjectionStorerTests

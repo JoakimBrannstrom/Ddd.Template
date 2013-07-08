@@ -3,7 +3,7 @@ using Ddd.Template.Contracts.Events;
 using Ddd.Template.Contracts.Events.Visitor;
 using NServiceBus;
 
-namespace Ddd.Template.Denormalizer.Rebuilder.Tests.HandlerDiscovery
+namespace Ddd.Template.Projections.Rebuilder.Tests.HandlerDiscovery
 {
 	internal sealed class EventAndVisitorArrivedHandlerStub : IHandleMessages<Event>, IHandleMessages<VisitorArrived>
 	{

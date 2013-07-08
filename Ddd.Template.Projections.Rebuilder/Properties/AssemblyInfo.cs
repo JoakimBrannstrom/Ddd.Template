@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ddd.Template.Denormalizer.Rebuilder.Tests")]
+[assembly: AssemblyTitle("Ddd.Template.Projections.Rebuilder")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Ddd.Template.Denormalizer.Rebuilder.Tests")]
+[assembly: AssemblyProduct("Ddd.Template.Projections.Rebuilder")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fead81ea-0ef8-46e0-9983-ea14caa14e4a")]
+[assembly: Guid("d1af0832-155d-453f-a58a-3b0dac37393a")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -34,3 +34,6 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+[assembly: InternalsVisibleTo("Ddd.Template.Projections.Rebuilder.Tests")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]

@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery;
+using Ddd.Template.Projections.Rebuilder.HandlerDiscovery;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Ddd.Template.Denormalizer.Rebuilder.Tests.HandlerDiscovery
+namespace Ddd.Template.Projections.Rebuilder.Tests.HandlerDiscovery
 {
 	[TestClass]
 	public sealed class MessageTypeFinderTests

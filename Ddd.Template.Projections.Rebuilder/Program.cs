@@ -3,15 +3,14 @@ using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
 using Ddd.Template.Denormalizer.Raven;
-using Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery;
-using Ddd.Template.Projections;
+using Ddd.Template.Projections.Rebuilder.HandlerDiscovery;
 using EventStore;
 using Raven.Client;
 using Raven.Client.Document;
 using Raven.Client.Embedded;
 using Raven.Client.Extensions;
 
-namespace Ddd.Template.Denormalizer.Rebuilder
+namespace Ddd.Template.Projections.Rebuilder
 {
 	static class Program
 	{
