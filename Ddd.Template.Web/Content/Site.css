@@ -97,10 +97,6 @@ dd {
 .clearfix:after {
     clear:both;
 }
-/* For IE 6/7 (trigger hasLayout) */
-.clearfix {
-    zoom:1;
-}
 
 /* main layout
 ----------------------------------------------------------*/
@@ -227,8 +223,8 @@ button {
 	font-size: 1.2em;
 	font-weight: 600;
 	margin-right: 8px;
-	min-width: auto;
-	max-width: auto;
+	min-width: 0;
+	max-width: none;
 	width: auto;
 }
 
