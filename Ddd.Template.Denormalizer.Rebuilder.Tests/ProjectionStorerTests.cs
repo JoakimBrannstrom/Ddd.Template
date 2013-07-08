@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Ddd.Template.Denormalizer.Projections;
+using Ddd.Template.Projections;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Raven.Client.Embedded;
 

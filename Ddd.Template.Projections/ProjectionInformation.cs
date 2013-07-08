@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ddd.Template.Denormalizer.Projections
+namespace Ddd.Template.Projections
 {
 	public class ProjectionInformation
 	{

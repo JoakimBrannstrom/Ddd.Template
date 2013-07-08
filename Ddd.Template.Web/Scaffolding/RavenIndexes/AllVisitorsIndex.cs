@@ -1,6 +1,6 @@
 ﻿using System.Linq;
+using Ddd.Template.Projections;
 using Raven.Client.Indexes;
-using Ddd.Template.Denormalizer.Projections;
 
 namespace Ddd.Template.Web.Scaffolding.RavenIndexes
 {

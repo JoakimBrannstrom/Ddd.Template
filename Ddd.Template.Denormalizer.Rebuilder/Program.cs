@@ -2,9 +2,9 @@
 using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
-using Ddd.Template.Denormalizer.Projections;
 using Ddd.Template.Denormalizer.Raven;
 using Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery;
+using Ddd.Template.Projections;
 using EventStore;
 using Raven.Client;
 using Raven.Client.Document;

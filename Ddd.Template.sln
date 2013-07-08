@@ -32,7 +32,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Domain", "Ddd.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Denormalizer", "Ddd.Template.Denormalizer\Ddd.Template.Denormalizer.csproj", "{470AAC0F-595F-4432-A904-121824204454}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Denormalizer.Projections", "Ddd.Template.Denormalizer.Projections\Ddd.Template.Denormalizer.Projections.csproj", "{B829DF8C-383E-44FD-BE25-24EB194D0F72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Projections", "Ddd.Template.Projections\Ddd.Template.Projections.csproj", "{B829DF8C-383E-44FD-BE25-24EB194D0F72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ddd.Template.Denormalizer.Tests", "Ddd.Template.Denormalizer.Tests\Ddd.Template.Denormalizer.Tests.csproj", "{8CB19B81-56AB-4C32-B4C5-C7625A310B7D}"
 EndProject

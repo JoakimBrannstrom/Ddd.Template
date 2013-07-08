@@ -1,6 +1,6 @@
 ﻿using System;
 using Ddd.Template.Contracts.Events.Visitor;
-using Ddd.Template.Denormalizer.Projections;
+using Ddd.Template.Projections;
 using NServiceBus;
 using Raven.Client;
 

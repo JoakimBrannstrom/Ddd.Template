@@ -83,7 +83,7 @@
     </ProjectReference>
     <ProjectReference Include="..\Ddd.Template.Web\Ddd.Template.Web.csproj">
       <Project>{ED0D0BB4-3020-47AB-ADD6-BB7D3026C038}</Project>
-      <Name>DocumentStation.Web</Name>
+      <Name>Ddd.Template.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

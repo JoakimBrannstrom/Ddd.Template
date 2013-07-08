@@ -1,7 +1,7 @@
 ﻿using System;
 using Ddd.Template.Contracts;
 using Ddd.Template.Contracts.Events;
-using Ddd.Template.Denormalizer.Projections;
+using Ddd.Template.Projections;
 using Raven.Client;
 
 namespace Ddd.Template.Denormalizer.Raven

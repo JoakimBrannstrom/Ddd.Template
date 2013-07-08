@@ -7,8 +7,8 @@
     <ProjectGuid>{B829DF8C-383E-44FD-BE25-24EB194D0F72}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ddd.Template.Denormalizer.Projections</RootNamespace>
-    <AssemblyName>Ddd.Template.Denormalizer.Projections</AssemblyName>
+    <RootNamespace>Ddd.Template.Projections</RootNamespace>
+    <AssemblyName>Ddd.Template.Projections</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Ddd.Template.Denormalizer.Projections
+namespace Ddd.Template.Projections
 {
 	public sealed class Visitor : ProjectionInformation
 	{
