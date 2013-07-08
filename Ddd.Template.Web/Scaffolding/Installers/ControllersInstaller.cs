@@ -7,7 +7,7 @@ using Ddd.Template.Web.Controllers;
 
 namespace Ddd.Template.Web.Scaffolding.Installers
 {
-	public class ControllersInstaller : IWindsorInstaller
+	public sealed class ControllersInstaller : IWindsorInstaller
 	{
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{

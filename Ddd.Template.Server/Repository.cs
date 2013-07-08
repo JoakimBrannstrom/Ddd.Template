@@ -8,7 +8,7 @@ using ConcurrencyException = Ddd.Template.Contracts.ConcurrencyException;
 
 namespace Ddd.Template.Server
 {
-	public class Repository<T> : IRepository<T> where T : AggregateRoot, new()
+	internal class Repository<T> : IRepository<T> where T : AggregateRoot, new()
 	{
 		private readonly IStoreEvents _eventStore;
 
@@ -17,7 +17,7 @@ namespace Ddd.Template.Server
 			_eventStore = eventStore;
 		}
 
-		public virtual void Save(Guid commitId, AggregateRoot aggregate, int originalVersion, Guid originatorId)
+		public void Save(Guid commitId, AggregateRoot aggregate, int originalVersion, Guid originatorId)
 		{
 			using (var stream = _eventStore.OpenStream(aggregate.Id, 0, int.MaxValue))
 			{
@@ -62,7 +62,7 @@ namespace Ddd.Template.Server
 			}
 		}
 
-		public virtual T GetById(Guid id)
+		public T GetById(Guid id)
 		{
 			using (var stream = _eventStore.OpenStream(id, 0, int.MaxValue))
 			{
@@ -76,7 +76,7 @@ namespace Ddd.Template.Server
 			}
 		}
 
-		public virtual bool Exists(Guid id)
+		public bool Exists(Guid id)
 		{
 			using (var stream = _eventStore.OpenStream(id, 0, 1))
 			{

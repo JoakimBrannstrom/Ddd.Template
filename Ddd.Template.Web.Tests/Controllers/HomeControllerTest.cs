@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ddd.Template.Web.Tests.Controllers
 {
 	[TestClass]
-	public class HomeControllerTest
+	public sealed class HomeControllerTest
 	{
 		[TestMethod]
 		public void Index()

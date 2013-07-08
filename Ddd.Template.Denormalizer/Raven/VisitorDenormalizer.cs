@@ -6,9 +6,9 @@ using Raven.Client;
 
 namespace Ddd.Template.Denormalizer.Raven
 {
-	public class VisitorDenormalizer : DenormalizerBase,
-										IHandleMessages<VisitorArrived>,
-										IHandleMessages<VisitorLoggedIn>
+	public sealed class VisitorDenormalizer :	DenormalizerBase,
+												IHandleMessages<VisitorArrived>,
+												IHandleMessages<VisitorLoggedIn>
 	{
 		public VisitorDenormalizer(IDocumentStore store)
 			: base(store)

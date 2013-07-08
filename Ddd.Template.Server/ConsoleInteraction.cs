@@ -5,7 +5,7 @@ using NServiceBus;
 
 namespace Ddd.Template.Server
 {
-	internal class ConsoleInteraction : IWantToRunAtStartup,
+	internal sealed class ConsoleInteraction : IWantToRunAtStartup,
 										IHandleMessages<IMessage>,
 										IHandleMessages<Command>,
 										IHandleMessages<Event>

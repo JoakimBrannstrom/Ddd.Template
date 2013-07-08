@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
 {
-	public class HandlerMapping
+	internal sealed class HandlerMapping
 	{
 		public Type HandlerType { get; private set; }
 		public List<HandlerMessageMapping> MessageMappings { get; private set; }

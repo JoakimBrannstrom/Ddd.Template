@@ -6,7 +6,7 @@ using Ddd.Template.Domain.Aggregates;
 
 namespace Ddd.Template.Server.Bootstrap
 {
-	public class RepositoryInstaller : IWindsorInstaller
+	public sealed class RepositoryInstaller : IWindsorInstaller
 	{
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{

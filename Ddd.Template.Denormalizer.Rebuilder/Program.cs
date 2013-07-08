@@ -13,7 +13,7 @@ using Raven.Client.Extensions;
 
 namespace Ddd.Template.Denormalizer.Rebuilder
 {
-	class Program
+	static class Program
 	{
 		static void Main(string[] args)
 		{

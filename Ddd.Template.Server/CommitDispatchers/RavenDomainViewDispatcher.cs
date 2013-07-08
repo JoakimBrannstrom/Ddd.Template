@@ -5,7 +5,7 @@ using Raven.Client;
 
 namespace Ddd.Template.Server.CommitDispatchers
 {
-	public class RavenDomainViewDispatcher
+	internal sealed class RavenDomainViewDispatcher
 	{
 		private readonly IDocumentStore _store;
 

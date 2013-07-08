@@ -4,7 +4,7 @@ using NServiceBus;
 
 namespace Ddd.Template.Denormalizer
 {
-	internal class ConsoleInteraction : IWantToRunAtStartup, IHandleMessages<Event>
+	internal sealed class ConsoleInteraction : IWantToRunAtStartup, IHandleMessages<Event>
 	{
 		public void Run()
 		{

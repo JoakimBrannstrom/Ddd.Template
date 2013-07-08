@@ -7,7 +7,7 @@ using Moq;
 namespace Ddd.Template.Web.Tests.Startup
 {
 	[TestClass]
-	public class SessionStartupTests : ApplicationTestsBase
+	public sealed class SessionStartupTests : ApplicationTestsBase
 	{
 		[TestMethod]
 		public void GivenNewVisitor_WhenSessionIsStarted_ThenAddVisitorCommandShouldBeSent()

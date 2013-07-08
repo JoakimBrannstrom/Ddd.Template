@@ -16,7 +16,7 @@ using log4net.Config;
 
 namespace Ddd.Template.Server.Bootstrap
 {
-	public class EndpointConfig : IConfigureThisEndpoint, AsA_Server, IWantCustomInitialization
+	public sealed class EndpointConfig : IConfigureThisEndpoint, AsA_Server, IWantCustomInitialization
 	{
 		public void Init()
 		{
@@ -56,7 +56,7 @@ namespace Ddd.Template.Server.Bootstrap
 				                                .Configure(new FileInfo(Settings.Log4NetConfigurationFilename)));
 		}
 
-		protected virtual Configure GetConfigurationInstance()
+		private Configure GetConfigurationInstance()
 		{
 			return Configure
 					.With(new[] { typeof(CommandHandlerBase<>).Assembly, typeof(ConsoleInteraction).Assembly });
@@ -91,7 +91,7 @@ namespace Ddd.Template.Server.Bootstrap
 				.Start();
 		}
 
-		protected virtual void RegisterDocumentStore(IWindsorContainer container)
+		private void RegisterDocumentStore(IWindsorContainer container)
 		{
 			var store = new DocumentStore
 				{

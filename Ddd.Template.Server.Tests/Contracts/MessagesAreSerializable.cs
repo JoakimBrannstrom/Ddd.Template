@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ddd.Template.Server.Tests.Contracts
 {
 	[TestClass]
-	public class MessagesAreSerializable
+	public sealed class MessagesAreSerializable
 	{
 		[TestMethod]
 		public void AllCommandsShouldHaveTheSerializableAttributeAssigned()

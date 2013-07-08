@@ -5,7 +5,7 @@ namespace Ddd.Template.Contracts.Commands.Visitor
 {
 	[Serializable]
 	[DataContract]
-	public class AddVisitorLogin : VisitorCommand
+	public sealed class AddVisitorLogin : VisitorCommand
 	{
 		[DataMember] public Guid UserId { get; set; }
 	}

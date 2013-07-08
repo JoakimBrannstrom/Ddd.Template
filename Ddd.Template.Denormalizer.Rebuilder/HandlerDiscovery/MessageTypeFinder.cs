@@ -5,9 +5,9 @@ using NServiceBus;
 
 namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
 {
-	public class MessageTypeFinder
+	internal sealed class MessageTypeFinder
 	{
-		public IEnumerable<Type> GetHandledMessageTypes(Type handler)
+		public static IEnumerable<Type> GetHandledMessageTypes(Type handler)
 		{
 			var genericInterfaces = GetGenericInterfaces(handler);
 

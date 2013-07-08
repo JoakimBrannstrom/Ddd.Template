@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ddd.Template.Denormalizer.Tests.Aggregates.Visitor
 {
 	[TestClass]
-	public class WhenVisitorWasAdded : EventTestFixture<VisitorArrived, VisitorDenormalizer>
+	public sealed class WhenVisitorWasAdded : EventTestFixture<VisitorArrived, VisitorDenormalizer>
 	{
 		private const string Platform = "Unit test";
 		readonly DateTime _timestamp = DateTime.UtcNow;

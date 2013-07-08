@@ -13,7 +13,7 @@ using Raven.Client.Indexes;
 
 namespace Ddd.Template.Web.Scaffolding.Installers
 {
-	public class RavenDbInstaller : IWindsorInstaller
+	public sealed class RavenDbInstaller : IWindsorInstaller
 	{
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{
@@ -21,7 +21,7 @@ namespace Ddd.Template.Web.Scaffolding.Installers
 		}
 	}
 
-	public class RavenDbFacility : AbstractFacility
+	public sealed class RavenDbFacility : AbstractFacility
 	{
 		private string _projectionsDbName;
 

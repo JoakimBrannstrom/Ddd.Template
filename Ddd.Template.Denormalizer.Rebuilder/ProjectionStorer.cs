@@ -5,7 +5,7 @@ using Raven.Client;
 
 namespace Ddd.Template.Denormalizer.Rebuilder
 {
-	public class ProjectionStorer
+	internal sealed class ProjectionStorer
 	{
 		private readonly IDocumentStore _inMemoryStore;
 		private readonly IDocumentStore _persistantStore;

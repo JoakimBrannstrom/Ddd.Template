@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<AssemblyDependencies>
+  <Dependencies_For Assembly="Ddd.Template.Contracts v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Core v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Microsoft.CSharp v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Runtime.Serialization v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Web.Mvc v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.ComponentModel.DataAnnotations v4.0.0.0</DependsOn_Name>
+    </DependsOn>
+    <ReferencedBy>
+      <ReferencedBy_Name>Ddd.Template.Domain v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer.Tests v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Web.Tests v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Server v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Server.Tests v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer.Rebuilder.Tests v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Web v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer v1.0.0.0</ReferencedBy_Name>
+    </ReferencedBy>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Domain v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>Ddd.Template.Contracts v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus v3.3.0.0</DependsOn_Name>
+    </DependsOn>
+    <ReferencedBy>
+      <ReferencedBy_Name>Ddd.Template.Server v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Server.Tests v1.0.0.0</ReferencedBy_Name>
+    </ReferencedBy>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Denormalizer.Projections v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+    </DependsOn>
+    <ReferencedBy>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer.Rebuilder v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer.Tests v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer.Rebuilder.Tests v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Web v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer v1.0.0.0</ReferencedBy_Name>
+    </ReferencedBy>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Denormalizer v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus.Host v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Contracts v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Castle.Windsor v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus.Core v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Lightweight v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Denormalizer.Projections v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Castle.Facilities.Logging v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>Castle.Core v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>log4net v1.2.10.0</DependsOn_Name>
+      <DependsOn_Name>System.Configuration v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus.ObjectBuilder.CastleWindsor v3.3.0.0</DependsOn_Name>
+    </DependsOn>
+    <ReferencedBy>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer.Rebuilder v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer.Tests v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer.Rebuilder.Tests v1.0.0.0</ReferencedBy_Name>
+    </ReferencedBy>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Denormalizer.Rebuilder v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>EventStore v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Embedded v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Lightweight v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>System v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Denormalizer.Projections v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Core v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Configuration v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>EventStore.Persistence.RavenPersistence v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>EventStore.Serialization.Json v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Denormalizer v1.0.0.0</DependsOn_Name>
+    </DependsOn>
+    <ReferencedBy>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer.Rebuilder.Tests v1.0.0.0</ReferencedBy_Name>
+    </ReferencedBy>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Test.Contrib v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Core v4.0.0.0</DependsOn_Name>
+    </DependsOn>
+    <ReferencedBy>
+      <ReferencedBy_Name>Ddd.Template.Denormalizer.Tests v1.0.0.0</ReferencedBy_Name>
+      <ReferencedBy_Name>Ddd.Template.Server.Tests v1.0.0.0</ReferencedBy_Name>
+    </ReferencedBy>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Denormalizer.Tests v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>Ddd.Template.Contracts v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Denormalizer v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Core v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Microsoft.CSharp v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Lightweight v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Denormalizer.Projections v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Test.Contrib v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Embedded v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Database v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>Moq v4.0.10827.0</DependsOn_Name>
+    </DependsOn>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Web v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Web.Mvc v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Web v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Castle.Windsor v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Lightweight v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Denormalizer.Projections v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Web.Optimization v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Web.Http v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Contracts v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus.Core v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Web.Http.WebHost v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Core v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Castle.Facilities.Logging v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>log4net v1.2.10.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus.ObjectBuilder.CastleWindsor v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Configuration v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System v4.0.0.0</DependsOn_Name>
+    </DependsOn>
+    <ReferencedBy>
+      <ReferencedBy_Name>Ddd.Template.Web.Tests v1.0.0.0</ReferencedBy_Name>
+    </ReferencedBy>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Web.Tests v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Web v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Moq v4.0.10827.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>Castle.Windsor v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Web v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Core v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Web.Mvc v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Microsoft.CSharp v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Contracts v1.0.0.0</DependsOn_Name>
+    </DependsOn>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Server v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>EventStore v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>Castle.Windsor v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus.Host v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Contracts v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Domain v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>log4net v1.2.10.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Lightweight v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus.Core v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Core v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Castle.Facilities.Logging v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>Castle.Core v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus.ObjectBuilder.CastleWindsor v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Configuration v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>EventStore.Persistence.RavenPersistence v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>EventStore.Serialization.Json v3.2.0.0</DependsOn_Name>
+    </DependsOn>
+    <ReferencedBy>
+      <ReferencedBy_Name>Ddd.Template.Server.Tests v1.0.0.0</ReferencedBy_Name>
+    </ReferencedBy>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Server.Tests v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>Ddd.Template.Contracts v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Domain v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>EventStore v3.2.0.0</DependsOn_Name>
+      <DependsOn_Name>Moq v4.0.10827.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Server v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System.Core v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Lightweight v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Test.Contrib v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Embedded v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Database v2.0.3.0</DependsOn_Name>
+    </DependsOn>
+  </Dependencies_For>
+  <Dependencies_For Assembly="Ddd.Template.Denormalizer.Rebuilder.Tests v1.0.0.0">
+    <DependsOn>
+      <DependsOn_Name>mscorlib v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>NServiceBus v3.3.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Contracts v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Moq v4.0.10827.0</DependsOn_Name>
+      <DependsOn_Name>System.Core v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Denormalizer.Rebuilder v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>System v4.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Lightweight v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>Raven.Client.Embedded v2.0.3.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Denormalizer v1.0.0.0</DependsOn_Name>
+      <DependsOn_Name>Ddd.Template.Denormalizer.Projections v1.0.0.0</DependsOn_Name>
+    </DependsOn>
+  </Dependencies_For>
+</AssemblyDependencies>

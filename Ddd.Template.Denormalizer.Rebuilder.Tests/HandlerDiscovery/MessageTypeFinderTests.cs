@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ddd.Template.Denormalizer.Rebuilder.Tests.HandlerDiscovery
 {
 	[TestClass]
-	public class MessageTypeFinderTests
+	public sealed class MessageTypeFinderTests
 	{
 		[TestMethod]
 		public void GivenHandlerThatImplementsSeveralMatchingHandleMethodsForEventExists_WhenHandlerInvokerRuns_ThenAllHandlerMethodsShouldBeInvoked()
@@ -14,7 +14,7 @@ namespace Ddd.Template.Denormalizer.Rebuilder.Tests.HandlerDiscovery
 			var finder = new MessageTypeFinder();
 
 			// Act
-			var methods = finder.GetHandledMessageTypes(typeof(EventAndVisitorArrivedHandlerStub)).ToArray();
+			var methods = MessageTypeFinder.GetHandledMessageTypes(typeof(EventAndVisitorArrivedHandlerStub)).ToArray();
 
 			// Assert
 			Assert.IsNotNull(methods);

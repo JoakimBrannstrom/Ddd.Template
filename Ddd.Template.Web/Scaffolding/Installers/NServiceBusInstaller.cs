@@ -7,7 +7,7 @@ using NServiceBus;
 
 namespace Ddd.Template.Web.Scaffolding.Installers
 {
-	public class NServiceBusInstaller : IWindsorInstaller
+	public sealed class NServiceBusInstaller : IWindsorInstaller
 	{
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{

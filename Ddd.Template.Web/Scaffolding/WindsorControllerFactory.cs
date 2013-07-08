@@ -6,7 +6,7 @@ using Castle.MicroKernel;
 
 namespace Ddd.Template.Web.Scaffolding
 {
-	public class WindsorControllerFactory : DefaultControllerFactory
+	public sealed class WindsorControllerFactory : DefaultControllerFactory
 	{
 		private readonly IKernel _kernel;
 

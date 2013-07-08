@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
 {
-	public class HandlerInvoker
+	public sealed class HandlerInvoker
 	{
 		private readonly object[] _handlers;
 		private readonly List<HandlerMapping> _handlerMappings;
@@ -17,7 +17,7 @@ namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
 			_handlerMappings = new List<HandlerMapping>(mappings);
 		}
 
-		private IEnumerable<HandlerMapping> GetHandlerMappings(IEnumerable<object> handlers)
+		private static IEnumerable<HandlerMapping> GetHandlerMappings(IEnumerable<object> handlers)
 		{
 			var methodMapper = new HandlerMethodMapper();
 

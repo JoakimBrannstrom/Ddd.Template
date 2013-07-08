@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ApplicationMetrics NAsm="12" NbSourceFiles="95" NbLinesOfCode="928" NbLinesOfComment="387" PercentageComment="29" NType="121" NClass="116" NAbstractClass="12" NInterface="4" NValueType="0" NExceptionType="2" NAttributeType="0" NDelegateType="0" NEnumType="1" NGenericMethodsDefinition="14" NGenericTypesDefinition="13" NILInstruction="9887" NMethods="562" NFields="233" NNamespaces="42" NThirdPartyAssemblies="27" NThirdPartyNamespaces="67" NThirdPartyTypes="263" NThirdPartyMethods="342" NThirdPartyFields="13" PercentCodeCoverage="0" PercentPublicType="74.38" PercentPublicMethod="56.94" PercentClassWithAtLeastOnePublicField="2.48">
+  <PropertyOnInterface Occ="4" Avg="0.5" StdDev="0.5" MaxVal="1" MaxName="Ddd.Template.Denormalizer.Projections.IHaveOwner" />
+  <MethodOnInterface Occ="4" Avg="2" StdDev="0.71" MaxVal="3" MaxName="Ddd.Template.Domain.IRepository&lt;T&gt;" />
+  <ArgOnMethodOnInterface Occ="8" Avg="1" StdDev="1.22" MaxVal="4" MaxName="Ddd.Template.Domain.IRepository&lt;T&gt;.Save(Guid,AggregateRoot,Int32,Guid)" />
+  <PublicPropertyOnClass Occ="116" Avg="0.45" StdDev="1.23" MaxVal="7" MaxName="Ddd.Template.Denormalizer.Projections.Visitor" />
+  <PublicMethodOnClass Occ="116" Avg="2.69" StdDev="2.54" MaxVal="15" MaxName="Ddd.Template.Denormalizer.Projections.Visitor" />
+  <ArgOnPublicMethodOnClass Occ="312" Avg="0.51" StdDev="0.77" MaxVal="7" MaxName="Ddd.Template.Domain.Aggregates.Visitor..ctor(Guid,DateTime,String,String,String,String,List&lt;String&gt;)" />
+  <ILInstructionInNonAbstractMethods Occ="549" Avg="18.01" StdDev="25.94" MaxVal="243" MaxName="Ddd.Template.Web.Scaffolding.RavenIndexes.AllVisitorsIndex..ctor()" />
+  <TypeWithTheMostILInstruction Occ="116" Avg="85.23" StdDev="95.79" MaxVal="560" MaxName="Ddd.Template.Server.Tests.CommandTestFixture&lt;TAggregateRoot,TCommand,TCommandHandler&gt;" />
+  <MethodCC Occ="549" Avg="1.74" StdDev="2" MaxVal="17" MaxName="Ddd.Template.Server.Tests.Scaffolding.DependencyConfigurator&lt;TAggregateRoot,TCommand,TCommandHandler&gt;+&lt;InitializeConstructorParameters&gt;d__1.MoveNext()" />
+</ApplicationMetrics>

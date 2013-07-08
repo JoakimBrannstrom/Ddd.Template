@@ -5,9 +5,9 @@ using NServiceBus;
 
 namespace Ddd.Template.Domain.CommandHandlers
 {
-	public class VisitorCommandHandler : CommandHandlerBase<Visitor>,
-										IHandleMessages<AddVisitor>,
-										IHandleMessages<AddVisitorLogin>
+	public sealed class VisitorCommandHandler : CommandHandlerBase<Visitor>,
+												IHandleMessages<AddVisitor>,
+												IHandleMessages<AddVisitorLogin>
 	{
 		public VisitorCommandHandler(IRepository<Visitor> repository)
 			: base(repository)

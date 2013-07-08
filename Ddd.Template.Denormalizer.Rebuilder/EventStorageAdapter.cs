@@ -5,12 +5,12 @@ using EventStore;
 
 namespace Ddd.Template.Denormalizer.Rebuilder
 {
-	public interface IEventStorage
+	internal interface IEventStorage
 	{
 		IEnumerable<object> GetAll();
 	}
 
-	public class EventStorageAdapter : IEventStorage
+	internal sealed class EventStorageAdapter : IEventStorage
 	{
 		private readonly IStoreEvents _eventStore;
 
@@ -19,7 +19,7 @@ namespace Ddd.Template.Denormalizer.Rebuilder
 			_eventStore = eventStore;
 		}
 
-		public virtual IEnumerable<object> GetAll()
+		public IEnumerable<object> GetAll()
 		{
 			var commits = _eventStore.Advanced.GetFrom(DateTime.MinValue);
 

@@ -6,7 +6,7 @@ namespace Ddd.Template.Contracts.Events.Visitor
 {
 	[Serializable]
 	[DataContract]
-	public class VisitorArrived : VisitorEvent
+	public sealed class VisitorArrived : VisitorEvent
 	{
 		[DataMember] public string UserAgent { get; set; }
 		[DataMember] public string Platform { get; set; }

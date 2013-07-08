@@ -14,7 +14,7 @@ using Raven.Client.Extensions;
 
 namespace Ddd.Template.Denormalizer.Bootstrap
 {
-	public class EndpointConfig : IConfigureThisEndpoint, AsA_Client, IWantCustomInitialization
+	public sealed class EndpointConfig : IConfigureThisEndpoint, AsA_Client, IWantCustomInitialization
 	{
 		public void Init()
 		{
@@ -56,7 +56,7 @@ namespace Ddd.Template.Denormalizer.Bootstrap
 											.Configure(new FileInfo(Settings.Log4NetConfigurationFilename)));
 		}
 
-		protected virtual Configure GetConfigurationInstance()
+		private Configure GetConfigurationInstance()
 		{
 			return Configure.With();
 		}
@@ -91,7 +91,7 @@ namespace Ddd.Template.Denormalizer.Bootstrap
 				.Start();
 		}
 
-		protected virtual void RegisterDocumentStore(IWindsorContainer container)
+		private void RegisterDocumentStore(IWindsorContainer container)
 		{
 			var store = new DocumentStore
 			{

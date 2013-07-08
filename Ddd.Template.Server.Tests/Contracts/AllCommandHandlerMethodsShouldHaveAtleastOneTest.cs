@@ -10,7 +10,7 @@ using NServiceBus;
 namespace Ddd.Template.Server.Tests.Contracts
 {
 	[TestClass]
-	public class AllCommandHandlerMethodsShouldHaveAtleastOneTest
+	public sealed class AllCommandHandlerMethodsShouldHaveAtleastOneTest
 	{
 		[TestMethod]
 		public void VerifyThatEachCommandHandlerMethodHaveAtLeastOneTest()

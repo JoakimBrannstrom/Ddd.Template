@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ddd.Template.Denormalizer.Tests.Aggregates.Visitor
 {
 	[TestClass]
-	public class WhenVisitorLoggedIn : EventTestFixture<VisitorLoggedIn, VisitorDenormalizer>
+	public sealed class WhenVisitorLoggedIn : EventTestFixture<VisitorLoggedIn, VisitorDenormalizer>
 	{
 		readonly Guid _userId = Guid.NewGuid();
 		readonly DateTime _timestamp = DateTime.UtcNow;

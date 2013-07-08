@@ -29,7 +29,7 @@ namespace Ddd.Template.Server.Tests.Aggregates.Visitor
 		}
 
 		[TestClass]
-		public class WhenVisitorArrived_WithNoHistory : WhenVisitorIsAdded
+		public sealed class WhenVisitorArrived_WithNoHistory : WhenVisitorIsAdded
 		{
 			[TestMethod]
 			public void OneEventShouldBePublishedOnTheBus()
@@ -51,7 +51,7 @@ namespace Ddd.Template.Server.Tests.Aggregates.Visitor
 		}
 
 		[TestClass]
-		public class WhenVisitorArrived_CalledTwice : WhenVisitorIsAdded
+		public sealed class WhenVisitorArrived_CalledTwice : WhenVisitorIsAdded
 		{
 			protected override Type GetExpectedExceptionType()
 			{

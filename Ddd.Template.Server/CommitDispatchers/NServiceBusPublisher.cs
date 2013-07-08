@@ -6,7 +6,7 @@ using NServiceBus;
 
 namespace Ddd.Template.Server.CommitDispatchers
 {
-	public class NServiceBusPublisher : IDispatchCommits
+	internal class NServiceBusPublisher : IDispatchCommits
 	{
 		// private const string AggregateIdKey = "AggregateId";
 		// private const string CommitVersionKey = "CommitVersion";

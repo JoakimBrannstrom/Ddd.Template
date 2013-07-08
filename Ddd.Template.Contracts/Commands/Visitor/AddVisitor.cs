@@ -6,7 +6,7 @@ namespace Ddd.Template.Contracts.Commands.Visitor
 {
 	[Serializable]
 	[DataContract]
-	public class AddVisitor : VisitorCommand
+	public sealed class AddVisitor : VisitorCommand
 	{
 		[DataMember] public string UserAgent { get; set; }
 		[DataMember] public string Platform { get; set; }

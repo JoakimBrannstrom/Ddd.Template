@@ -9,7 +9,7 @@ using EventStore.Logging;
 
 namespace Ddd.Template.Server.Bootstrap
 {
-	public class EventStoreInstaller : IWindsorInstaller
+	public sealed class EventStoreInstaller : IWindsorInstaller
 	{
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{

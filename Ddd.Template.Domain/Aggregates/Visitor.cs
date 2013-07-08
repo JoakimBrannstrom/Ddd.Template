@@ -5,7 +5,7 @@ using Ddd.Template.Contracts.Events.Visitor;
 
 namespace Ddd.Template.Domain.Aggregates
 {
-	public class Visitor : AggregateRoot
+	public sealed class Visitor : AggregateRoot
 	{
 		private Guid _id;
 

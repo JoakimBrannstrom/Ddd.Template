@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
 {
-	public class HandlerMessageMapping
+	internal sealed class HandlerMessageMapping
 	{
 		public Type MessageType { get; private set; }
 		public MethodInfo HandlingMethod { get; private set; }

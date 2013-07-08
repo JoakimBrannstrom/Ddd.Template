@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ddd.Template.Denormalizer.Rebuilder.Tests.HandlerDiscovery
 {
 	[TestClass]
-	public class HandlerMethodMapperTests
+	public sealed class HandlerMethodMapperTests
 	{
 		[TestMethod]
 		public void GivenProperHandler_WhenMappingProperType_ThenMappingShouldBeReturned()

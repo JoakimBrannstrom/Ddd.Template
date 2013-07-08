@@ -2,7 +2,7 @@
 
 namespace Ddd.Template.Denormalizer.Rebuilder
 {
-	public class ProjectionsRebuilder
+	internal sealed class ProjectionsRebuilder
 	{
 		private readonly IEventStorage _eventStore;
 		private readonly HandlerInvoker _handlerInvoker;

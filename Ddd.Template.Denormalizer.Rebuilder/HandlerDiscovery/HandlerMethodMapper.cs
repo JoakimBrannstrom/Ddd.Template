@@ -6,13 +6,13 @@ using NServiceBus;
 
 namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
 {
-	public class HandlerMethodMapper
+	internal sealed class HandlerMethodMapper
 	{
 		private readonly MessageTypeFinder _messageTypeFinder = new MessageTypeFinder();
 
 		public IEnumerable<HandlerMessageMapping> Map(Type handler)
 		{
-			var messageTypes = _messageTypeFinder.GetHandledMessageTypes(handler);
+			var messageTypes = MessageTypeFinder.GetHandledMessageTypes(handler);
 
 			foreach (var messageType in messageTypes)
 			{

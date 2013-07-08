@@ -31,7 +31,7 @@ namespace Ddd.Template.Server.Tests.Aggregates.Visitor
 		}
 
 		[TestClass]
-		public class WhenAddVisitorLogin_WithProperUserId : WhenAddVisitorLogin
+		public sealed class WhenAddVisitorLogin_WithProperUserId : WhenAddVisitorLogin
 		{
 			protected override Guid UserId { get { return Guid.NewGuid(); } }
 

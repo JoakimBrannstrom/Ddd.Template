@@ -6,7 +6,7 @@ using System.Reflection;
 namespace Ddd.Template.Contracts.Scaffolding
 {
 	// FROM http://blogs.msdn.com/b/davidebb/archive/2010/01/18/use-c-4-0-dynamic-to-drastically-simplify-your-private-reflection-code.aspx
-	class PrivateReflectionDynamicObject : DynamicObject
+	internal sealed class PrivateReflectionDynamicObject : DynamicObject
 	{
 		private object RealObject { get; set; }
 

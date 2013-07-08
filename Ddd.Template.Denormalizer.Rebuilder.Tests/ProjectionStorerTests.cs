@@ -7,7 +7,7 @@ using Raven.Client.Embedded;
 namespace Ddd.Template.Denormalizer.Rebuilder.Tests
 {
 	[TestClass]
-	public class ProjectionStorerTests
+	public sealed class ProjectionStorerTests
 	{
 		[TestMethod]
 		public void GivenProjectionsExistInMemoryStore_WhenProjectionsArePersisted_ThenProjectionsShouldExistInPersistandStore()

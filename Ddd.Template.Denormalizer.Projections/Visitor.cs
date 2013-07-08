@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Ddd.Template.Denormalizer.Projections
 {
-	public class Visitor : ProjectionInformation
+	public sealed class Visitor : ProjectionInformation
 	{
 		public string UserAgent { get; set; }
 		public string Platform { get; set; }
@@ -21,7 +21,7 @@ namespace Ddd.Template.Denormalizer.Projections
 		}
 	}
 
-	public class VisitInfo
+	public sealed class VisitInfo
 	{
 		public DateTime Timestamp { get; set; }
 		public Guid LinkId { get; set; }

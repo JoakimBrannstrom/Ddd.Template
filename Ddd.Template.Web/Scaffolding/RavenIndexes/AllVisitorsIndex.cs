@@ -4,13 +4,13 @@ using Ddd.Template.Denormalizer.Projections;
 
 namespace Ddd.Template.Web.Scaffolding.RavenIndexes
 {
-	public class VisitorCount
+	internal sealed class VisitorCount
 	{
 		public string Platform { get; set; }
 		public int Count { get; set; }
 	}
 
-	public class AllVisitorsIndex : AbstractIndexCreationTask<Visitor, VisitorCount>
+	internal sealed class AllVisitorsIndex : AbstractIndexCreationTask<Visitor, VisitorCount>
 	{
 		public AllVisitorsIndex()
 		{

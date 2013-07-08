@@ -14,7 +14,7 @@ using Raven.Client.Embedded;
 namespace Ddd.Template.Denormalizer.Rebuilder.Tests
 {
 	[TestClass]
-	public class ProjectionsRebuilderTests
+	public sealed class ProjectionsRebuilderTests
 	{
 		[TestMethod]
 		public void GivenVisitorEventsExistInStream_WhenRebuildingDenormalizedView_ThenVisitorProjectionsSholdExistInStorage()

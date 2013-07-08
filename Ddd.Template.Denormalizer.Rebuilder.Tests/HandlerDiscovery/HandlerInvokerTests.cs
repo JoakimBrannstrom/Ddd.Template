@@ -10,7 +10,7 @@ using NServiceBus;
 namespace Ddd.Template.Denormalizer.Rebuilder.Tests.HandlerDiscovery
 {
 	[TestClass]
-	public class HandlerInvokerTests
+	public sealed class HandlerInvokerTests
 	{
 		[TestMethod]
 		public void GivenHandlerForEventExists_WhenHandlerInvokerRuns_ThenHandlerShouldBeInvoked()

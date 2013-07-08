@@ -3,7 +3,7 @@
 namespace Ddd.Template.Contracts
 {
 	[Serializable]
-	public class ConcurrencyException : Exception
+	public sealed class ConcurrencyException : Exception
 	{
 		public ConcurrencyException(string message)
 			: base(message)
@@ -12,7 +12,7 @@ namespace Ddd.Template.Contracts
 	}
 
 	[Serializable]
-	public class AggregateNotFoundException : Exception
+	public sealed class AggregateNotFoundException : Exception
 	{
 		public AggregateNotFoundException(string message)
 			: base(message)

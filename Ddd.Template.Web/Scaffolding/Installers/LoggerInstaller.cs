@@ -5,7 +5,7 @@ using Castle.Windsor;
 
 namespace Ddd.Template.Web.Scaffolding.Installers
 {
-	public class LoggerInstaller : IWindsorInstaller
+	public sealed class LoggerInstaller : IWindsorInstaller
 	{
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{

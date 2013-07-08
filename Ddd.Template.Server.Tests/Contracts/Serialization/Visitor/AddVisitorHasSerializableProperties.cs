@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Ddd.Template.Server.Tests.Contracts.Serialization.Visitor
 {
 	[TestClass]
-	public class AddVisitorHasSerializableProperties : VisitorCommandHasSerializableProperties<AddVisitor>
+	public sealed class AddVisitorHasSerializableProperties : VisitorCommandHasSerializableProperties<AddVisitor>
 	{
 		protected override AddVisitor GetExpected()
 		{
