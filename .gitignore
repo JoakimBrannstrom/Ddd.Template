@@ -55,6 +55,9 @@ ipch/
 # ReSharper is a .NET coding add-in
 _ReSharper*
 
+# NDepend is a .NET static analysis add-in
+NDependOut
+
 # NCrunch
 *.ncrunch*
 .*crunch*.local.xml

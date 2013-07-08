@@ -11,7 +11,6 @@ namespace Ddd.Template.Denormalizer.Rebuilder.Tests.HandlerDiscovery
 		public void GivenHandlerThatImplementsSeveralMatchingHandleMethodsForEventExists_WhenHandlerInvokerRuns_ThenAllHandlerMethodsShouldBeInvoked()
 		{
 			// Arrange
-			var finder = new MessageTypeFinder();
 
 			// Act
 			var methods = MessageTypeFinder.GetHandledMessageTypes(typeof(EventAndVisitorArrivedHandlerStub)).ToArray();

@@ -1,11 +1,10 @@
 ﻿using System.Web;
 using Castle.Windsor;
-using Ddd.Template.Web;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NServiceBus;
 
-namespace DDD.Template.Web.Tests.Startup
+namespace Ddd.Template.Web.Tests.Startup
 {
 	[TestClass]
 	public abstract class ApplicationTestsBase : MvcApplication

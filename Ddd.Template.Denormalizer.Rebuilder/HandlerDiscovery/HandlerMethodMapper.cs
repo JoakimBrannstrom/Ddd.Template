@@ -8,8 +8,6 @@ namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
 {
 	internal sealed class HandlerMethodMapper
 	{
-		private readonly MessageTypeFinder _messageTypeFinder = new MessageTypeFinder();
-
 		public IEnumerable<HandlerMessageMapping> Map(Type handler)
 		{
 			var messageTypes = MessageTypeFinder.GetHandledMessageTypes(handler);

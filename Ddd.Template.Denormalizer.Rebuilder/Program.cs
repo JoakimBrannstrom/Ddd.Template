@@ -15,33 +15,23 @@ namespace Ddd.Template.Denormalizer.Rebuilder
 {
 	static class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
 			Console.Title = ".:: Ddd.Template.Denormalizer.Rebuilder ::.";
 
 			var inMemoryStore = GetInMemoryStore();
 
-			var persistentStore = new DocumentStore { ConnectionStringName = "PersistentRavenDb", ResourceManagerId = Guid.NewGuid() };
-			persistentStore.Initialize();
-
-			var persistentRavenDbName = ConfigurationManager.AppSettings["PersistentRavenDbName"];
-			if (string.IsNullOrEmpty(persistentRavenDbName))
-				throw new Exception("'PersistentRavenDbName' is missing from the app settings!");
-
-			persistentStore.DatabaseCommands.EnsureDatabaseExists(persistentRavenDbName);
+			var persistentStore = GetPersistentStore();
 
 			var storageAdapter = new EventStorageAdapter(BuildEventStore());
 
 			while (true)
 			{
-				Console.WriteLine("To replay events, press 'R'");
-				Console.WriteLine("To clear cache of replayed events, press 'C'");
-				Console.WriteLine("To save rebuilt projections, press 'S'");
-				Console.WriteLine("To exit, press 'Q'");
+				ShowAvailableCommands();
 
-				var cmd = Console.ReadKey().Key.ToString().ToLower();
-				Console.WriteLine("");
+				var cmd = GetUserCommand();
 
+				// ExecuteUserCommand
 				switch (cmd)
 				{
 					case "q":
@@ -67,6 +57,23 @@ namespace Ddd.Template.Denormalizer.Rebuilder
 			return inMemoryStore;
 		}
 
+		private static DocumentStore GetPersistentStore()
+		{
+			var persistentStore = new DocumentStore
+			{
+				ConnectionStringName = "PersistentRavenDb",
+				ResourceManagerId = Guid.NewGuid()
+			};
+			persistentStore.Initialize();
+
+			var persistentRavenDbName = ConfigurationManager.AppSettings["PersistentRavenDbName"];
+			if (string.IsNullOrEmpty(persistentRavenDbName))
+				throw new Exception("'PersistentRavenDbName' is missing from the app settings!");
+
+			persistentStore.DatabaseCommands.EnsureDatabaseExists(persistentRavenDbName);
+			return persistentStore;
+		}
+
 		private static IStoreEvents BuildEventStore()
 		{
 			return Wireup
@@ -80,6 +87,22 @@ namespace Ddd.Template.Denormalizer.Rebuilder
 					.Build();
 		}
 
+		private static void ShowAvailableCommands()
+		{
+			Console.WriteLine("To replay events, press 'R'");
+			Console.WriteLine("To clear cache of replayed events, press 'C'");
+			Console.WriteLine("To save rebuilt projections, press 'S'");
+			Console.WriteLine("To exit, press 'Q'");
+		}
+
+		private static string GetUserCommand()
+		{
+			var cmd = Console.ReadKey().Key.ToString().ToLower();
+			Console.WriteLine("");
+			return cmd;
+		}
+
+		#region ReplayEvents
 		private static void ReplayEvents(IDocumentStore store, IEventStorage storageAdapter)
 		{
 			var handlerInvoker = new HandlerInvoker(GetHandlers(store));
@@ -125,7 +148,9 @@ namespace Ddd.Template.Denormalizer.Rebuilder
 			Console.WriteLine("Nr of visitors: " + visitorCount);
 			Console.WriteLine("");
 		}
+		#endregion
 
+		#region SaveProjections
 		private static void SaveProjections(IDocumentStore inMemoryStore, IDocumentStore persistentStore)
 		{
 			var storer = new ProjectionStorer(inMemoryStore, persistentStore);
@@ -151,5 +176,6 @@ namespace Ddd.Template.Denormalizer.Rebuilder
 
 			Console.WriteLine(timer.Elapsed);
 		}
+		#endregion
 	}
 }

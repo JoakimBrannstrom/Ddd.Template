@@ -8,16 +8,16 @@ namespace Ddd.Template.Denormalizer.Raven
 {
 	public abstract class DenormalizerBase
 	{
-		protected readonly IDocumentStore Store;
+		private readonly IDocumentStore _store;
 
 		protected DenormalizerBase(IDocumentStore store)
 		{
-			Store = store;
+			_store = store;
 		}
 
 		protected void HandleEventIfVersionIsSubsequent<T>(Event @event, Action<T> action) where T : ProjectionInformation, new()
 		{
-			using (var session = Store.OpenSession())
+			using (var session = _store.OpenSession())
 			{
 				var originatorId = Guid.Empty;
 				var originatorEvent = @event as IHaveOriginator;

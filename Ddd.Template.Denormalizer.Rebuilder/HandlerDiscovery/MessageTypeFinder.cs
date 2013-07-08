@@ -5,7 +5,7 @@ using NServiceBus;
 
 namespace Ddd.Template.Denormalizer.Rebuilder.HandlerDiscovery
 {
-	internal sealed class MessageTypeFinder
+	internal static class MessageTypeFinder
 	{
 		public static IEnumerable<Type> GetHandledMessageTypes(Type handler)
 		{

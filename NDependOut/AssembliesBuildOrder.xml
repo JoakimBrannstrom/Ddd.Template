@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <AssemblySortForCompilOrObfusk>
-  <Assembly Assembly="Ddd.Template.Contracts">28</Assembly>
-  <Assembly Assembly="Ddd.Template.Domain">29</Assembly>
-  <Assembly Assembly="Ddd.Template.Denormalizer.Projections">30</Assembly>
-  <Assembly Assembly="Ddd.Template.Denormalizer">31</Assembly>
-  <Assembly Assembly="Ddd.Template.Denormalizer.Rebuilder">32</Assembly>
-  <Assembly Assembly="Ddd.Template.Test.Contrib">33</Assembly>
-  <Assembly Assembly="Ddd.Template.Denormalizer.Tests">34</Assembly>
-  <Assembly Assembly="Ddd.Template.Web">35</Assembly>
-  <Assembly Assembly="Ddd.Template.Web.Tests">36</Assembly>
-  <Assembly Assembly="Ddd.Template.Server">37</Assembly>
-  <Assembly Assembly="Ddd.Template.Server.Tests">38</Assembly>
-  <Assembly Assembly="Ddd.Template.Denormalizer.Rebuilder.Tests">39</Assembly>
+  <Assembly Assembly="Ddd.Template.Denormalizer.Projections">28</Assembly>
+  <Assembly Assembly="Ddd.Template.Contracts">29</Assembly>
+  <Assembly Assembly="Ddd.Template.Web">30</Assembly>
+  <Assembly Assembly="Ddd.Template.Web.Tests">31</Assembly>
+  <Assembly Assembly="Ddd.Template.Domain">32</Assembly>
+  <Assembly Assembly="Ddd.Template.Server">33</Assembly>
+  <Assembly Assembly="Ddd.Template.Denormalizer">34</Assembly>
+  <Assembly Assembly="Ddd.Template.Denormalizer.Rebuilder">35</Assembly>
+  <Assembly Assembly="Ddd.Template.Test.Contrib">36</Assembly>
+  <Assembly Assembly="Ddd.Template.Denormalizer.Tests">37</Assembly>
+  <Assembly Assembly="Ddd.Template.Denormalizer.Rebuilder.Tests">38</Assembly>
+  <Assembly Assembly="Ddd.Template.Server.Tests">39</Assembly>
 </AssemblySortForCompilOrObfusk>

@@ -1,5 +1,4 @@
 ﻿using System;
-using DDD.Template.Web.Tests.Startup;
 using Ddd.Template.Contracts.Commands.Visitor;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
