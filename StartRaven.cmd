@@ -7,7 +7,7 @@
 @echo **********************
 
 :: echo %cd% > currentDir.txt
-@start .\packages\RavenDB.Server.2.0.2375\tools\Raven.Server.exe
+@start .\packages\RavenDB.Server.2.5.2700\tools\Raven.Server.exe
 
 @GOTO STARTPROCESS
 

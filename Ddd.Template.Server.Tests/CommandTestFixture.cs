@@ -6,7 +6,7 @@ using Ddd.Template.Contracts.Commands;
 using Ddd.Template.Contracts.Events;
 using Ddd.Template.Server.CommitDispatchers;
 using Ddd.Template.Server.Tests.Scaffolding;
-using EventStore;
+using NEventStore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Moq.Protected;

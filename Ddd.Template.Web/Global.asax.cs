@@ -63,13 +63,15 @@ namespace Ddd.Template.Web
 
 		private void DebugCreateVisitors()
 		{
-			var visitors = new List<AddVisitor>();
 			var request = GetHttpRequest();
-			for (var i = 0; i < 1000; i++)
-				visitors.Add(CreateVisitor(request));
-
 			var bus = Container.Resolve<IBus>();
-			bus.Send(visitors.ToArray());
+			for (var i = 0; i < 10; i++)
+			{
+				var visitors = new List<AddVisitor>();
+				for (var j = 0; j < 100; j++)
+					visitors.Add(CreateVisitor(request));
+				bus.Send(visitors.ToArray());
+			}
 		}
 
 		private AddVisitor CreateVisitor(HttpRequestBase request)

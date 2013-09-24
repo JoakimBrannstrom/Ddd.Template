@@ -3,7 +3,7 @@
 	using System;
 	using log4net;
 
-	public sealed class Log4NetLogger : EventStore.Logging.ILog
+	public sealed class Log4NetLogger : NEventStore.Logging.ILog
 	{
 		private readonly ILog _log;
 

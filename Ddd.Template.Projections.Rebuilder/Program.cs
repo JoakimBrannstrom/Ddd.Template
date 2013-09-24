@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using Ddd.Template.Denormalizer.Raven;
 using Ddd.Template.Projections.Rebuilder.HandlerDiscovery;
-using EventStore;
+using NEventStore;
 using Raven.Client;
 using Raven.Client.Document;
 using Raven.Client.Embedded;
@@ -16,7 +16,7 @@ namespace Ddd.Template.Projections.Rebuilder
 	{
 		static void Main()
 		{
-			Console.Title = ".:: Ddd.Template.Denormalizer.Rebuilder ::.";
+			Console.Title = ".:: Ddd.Template.Projections.Rebuilder ::.";
 
 			var inMemoryStore = GetInMemoryStore();
 

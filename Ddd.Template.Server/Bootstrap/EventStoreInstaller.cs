@@ -3,9 +3,9 @@ using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using Ddd.Template.Server.CommitDispatchers;
-using EventStore;
-using EventStore.Dispatcher;
-using EventStore.Logging;
+using NEventStore;
+using NEventStore.Dispatcher;
+using NEventStore.Logging;
 
 namespace Ddd.Template.Server.Bootstrap
 {

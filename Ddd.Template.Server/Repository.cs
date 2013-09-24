@@ -3,7 +3,7 @@ using System.Linq;
 using Ddd.Template.Contracts;
 using Ddd.Template.Contracts.Events;
 using Ddd.Template.Domain;
-using EventStore;
+using NEventStore;
 using ConcurrencyException = Ddd.Template.Contracts.ConcurrencyException;
 
 namespace Ddd.Template.Server

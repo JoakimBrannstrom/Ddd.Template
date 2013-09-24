@@ -1,7 +1,7 @@
 ﻿using System;
 using Ddd.Template.Contracts.Events;
-using EventStore;
-using EventStore.Dispatcher;
+using NEventStore;
+using NEventStore.Dispatcher;
 using NServiceBus;
 
 namespace Ddd.Template.Server.CommitDispatchers

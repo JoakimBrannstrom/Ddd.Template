@@ -20,3 +20,6 @@
 
 -------------------------------------------
 
+##Done
+* Upgraded RavenDB
+* Moved from EventStore to NEventStore
