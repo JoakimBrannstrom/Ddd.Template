@@ -2,8 +2,6 @@
 ##Now
 
 ###Denormalizer:
-* Add denormalizer
-	- Create "current" domain view, including raven indexes
 
 -------------------------------------------
 ##Next
@@ -17,5 +15,8 @@
 -------------------------------------------
 
 ##Done
+* Add projections-rebuilder
+* Add denormalizer
+	- Create "current" domain view, including raven indexes
 * Upgraded RavenDB
 * Moved from EventStore to NEventStore

@@ -30,28 +30,13 @@ namespace Ddd.Template.Projections.Rebuilder
 
 				var cmd = GetUserCommand();
 
-				// ExecuteUserCommand
-				switch (cmd)
-				{
-					case "q":
-						Environment.Exit(0);
-						break;
-					case "c":
-						inMemoryStore = GetInMemoryStore();
-						break;
-					case "r":
-						ReplayEvents(inMemoryStore, storageAdapter);
-						break;
-					case "s":
-						SaveProjections(inMemoryStore, persistentStore);
-						break;
-				}
+				ExecuteUserCommand(cmd, ref inMemoryStore, persistentStore, storageAdapter);
 			}
 		}
 
 		private static EmbeddableDocumentStore GetInMemoryStore()
 		{
-			var inMemoryStore = new EmbeddableDocumentStore {RunInMemory = true, ResourceManagerId = Guid.NewGuid()};
+			var inMemoryStore = new EmbeddableDocumentStore { RunInMemory = true, ResourceManagerId = Guid.NewGuid() };
 			inMemoryStore.Initialize();
 			return inMemoryStore;
 		}
@@ -99,6 +84,29 @@ namespace Ddd.Template.Projections.Rebuilder
 			var cmd = Console.ReadKey().Key.ToString().ToLower();
 			Console.WriteLine("");
 			return cmd;
+		}
+
+		private static void ExecuteUserCommand(string cmd, ref EmbeddableDocumentStore inMemoryStore, DocumentStore persistentStore, EventStorageAdapter storageAdapter)
+		{
+			switch (cmd)
+			{
+				case "q":
+					Console.WriteLine("Bye bye!");
+					Environment.Exit(0);
+					break;
+				case "c":
+					Console.WriteLine("Cleaning cache...");
+					inMemoryStore = GetInMemoryStore();
+					break;
+				case "r":
+					Console.WriteLine("Replay of all events...");
+					ReplayEvents(inMemoryStore, storageAdapter);
+					break;
+				case "s":
+					Console.WriteLine("Saving replayed events...");
+					SaveProjections(inMemoryStore, persistentStore);
+					break;
+			}
 		}
 
 		#region ReplayEvents
