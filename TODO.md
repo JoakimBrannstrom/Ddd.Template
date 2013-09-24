@@ -8,15 +8,11 @@
 -------------------------------------------
 ##Next
 
-###Client:
-* Open Id login / OAuth login
-
 -------------------------------------------
 ##Later
-
-###Common:
-
-
+* Handle command/event that arrives more than once
+* Add unit tests for web
+* Open Id login / OAuth login
 
 -------------------------------------------
 

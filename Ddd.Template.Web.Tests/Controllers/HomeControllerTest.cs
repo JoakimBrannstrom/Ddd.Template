@@ -1,4 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using Raven.Client;
+using Raven.Client.Embedded;
+using Raven.Database;
+using System.Web.Mvc;
 using Ddd.Template.Web.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -7,14 +10,38 @@ namespace Ddd.Template.Web.Tests.Controllers
 	[TestClass]
 	public sealed class HomeControllerTest
 	{
+		IDocumentStore _store;
+		IDocumentSession _session;
+		HomeController _controller;
+
+		[TestInitialize]
+		public void Setup()
+		{
+			_store = new EmbeddableDocumentStore
+			{
+				RunInMemory = true
+			};
+
+			_store.Initialize();
+
+			_session = _store.OpenSession();
+			_controller = new HomeController(_session);
+		}
+
+		[TestCleanup]
+		public void Cleanup()
+		{
+			_session.Dispose();
+			_store.Dispose();
+		}
+
 		[TestMethod]
 		public void Index()
 		{
 			// Arrange
-			var controller = new HomeController();
 
 			// Act
-			var result = controller.Index() as ViewResult;
+			var result = _controller.Index() as ViewResult;
 
 			// Assert
 			Assert.IsNotNull(result);
@@ -25,10 +52,9 @@ namespace Ddd.Template.Web.Tests.Controllers
 		public void About()
 		{
 			// Arrange
-			var controller = new HomeController();
 
 			// Act
-			var result = controller.About() as ViewResult;
+			var result = _controller.About() as ViewResult;
 
 			// Assert
 			Assert.IsNotNull(result);
@@ -38,10 +64,9 @@ namespace Ddd.Template.Web.Tests.Controllers
 		public void Contact()
 		{
 			// Arrange
-			var controller = new HomeController();
 
 			// Act
-			var result = controller.Contact() as ViewResult;
+			var result = _controller.Contact() as ViewResult;
 
 			// Assert
 			Assert.IsNotNull(result);

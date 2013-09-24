@@ -1,0 +1,26 @@
+﻿@model Ddd.Template.Web.Scaffolding.RavenIndexes.VisitorCount[]
+
+@{
+	ViewBag.Title = "Visitor information.";
+	ViewBag.Message = "Here you can find some statistics about all visitors.";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+	<div>
+		<h3>Visitor information</h3>
+		<div>
+			<dl>
+			@foreach(var visitor in Model)
+			{
+				<dd>Platform: @visitor.Platform</dd>
+				<dt>Count: @visitor.Count</dt>
+			}
+			</dl>
+		</div>
+	</div>
+</article>

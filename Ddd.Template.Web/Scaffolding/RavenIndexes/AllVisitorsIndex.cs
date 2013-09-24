@@ -4,7 +4,7 @@ using Raven.Client.Indexes;
 
 namespace Ddd.Template.Web.Scaffolding.RavenIndexes
 {
-	internal sealed class VisitorCount
+	public sealed class VisitorCount
 	{
 		public string Platform { get; set; }
 		public int Count { get; set; }
