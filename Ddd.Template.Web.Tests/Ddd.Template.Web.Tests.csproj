@@ -117,6 +117,10 @@
       <Project>{f5b6dc24-bcfe-46e6-9041-c45ae0a9b761}</Project>
       <Name>Ddd.Template.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Ddd.Template.Projections\Ddd.Template.Projections.csproj">
+      <Project>{b829df8c-383e-44fd-be25-24eb194d0f72}</Project>
+      <Name>Ddd.Template.Projections</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Ddd.Template.Web\Ddd.Template.Web.csproj">
       <Project>{ED0D0BB4-3020-47AB-ADD6-BB7D3026C038}</Project>
       <Name>Ddd.Template.Web</Name>

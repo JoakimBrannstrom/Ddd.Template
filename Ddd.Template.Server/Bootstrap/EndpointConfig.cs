@@ -36,11 +36,6 @@ namespace Ddd.Template.Server.Bootstrap
 			RunInstallers(container);
 		}
 
-		protected virtual void RunInstallers(IWindsorContainer container)
-		{
-			container.Install(FromAssembly.This());
-		}
-
 		protected virtual IWindsorContainer BootstrapContainer()
 		{
 			var container = new WindsorContainer();
@@ -126,6 +121,11 @@ namespace Ddd.Template.Server.Bootstrap
 				ConnectionStringName = Settings.RavenDbConnectionStringName,
 				ResourceManagerId = Guid.NewGuid()
 			};
+		}
+
+		protected virtual void RunInstallers(IWindsorContainer container)
+		{
+			container.Install(FromAssembly.This());
 		}
 	}
 }

@@ -61,6 +61,7 @@ namespace Ddd.Template.Web
 			// DebugCreateVisitors();
 		}
 
+		/*
 		private void DebugCreateVisitors()
 		{
 			var request = GetHttpRequest();
@@ -73,6 +74,7 @@ namespace Ddd.Template.Web
 				bus.Send(visitors.ToArray());
 			}
 		}
+		*/
 
 		private AddVisitor CreateVisitor(HttpRequestBase request)
 		{

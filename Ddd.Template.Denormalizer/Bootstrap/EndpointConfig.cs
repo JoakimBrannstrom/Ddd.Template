@@ -7,6 +7,7 @@ using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Castle.Windsor.Installer;
 using Ddd.Template.Contracts;
+using Ddd.Template.Contrib;
 using NServiceBus;
 using Raven.Client;
 using Raven.Client.Document;
@@ -14,7 +15,7 @@ using Raven.Client.Extensions;
 
 namespace Ddd.Template.Denormalizer.Bootstrap
 {
-	public sealed class EndpointConfig : IConfigureThisEndpoint, AsA_Client, IWantCustomInitialization
+	public class EndpointConfig : IConfigureThisEndpoint, AsA_Client, IWantCustomInitialization
 	{
 		public void Init()
 		{
@@ -30,10 +31,10 @@ namespace Ddd.Template.Denormalizer.Bootstrap
 
 			RegisterDocumentStore(container);
 
-			container.Install(FromAssembly.This());
+			RunInstallers(container);
 		}
 
-		private IWindsorContainer BootstrapContainer()
+		protected virtual IWindsorContainer BootstrapContainer()
 		{
 			var container = new WindsorContainer();
 
@@ -74,12 +75,13 @@ namespace Ddd.Template.Denormalizer.Bootstrap
 
 		private void ConfigureNServiceBus(Configure configuration, IWindsorContainer container)
 		{
+			Func<string> connectionStringFactory = GetConnectionStringFactory("NServiceBus.Persistence");
 			var nServiceBusDbName = ConfigurationManager.AppSettings["NServiceBus.Persistence.RavenDbName"];
 
 			configuration
 				.DefineEndpointName("Ddd.Template.Denormalizer")
 				.CastleWindsorBuilder(container)
-				.RavenPersistence("NServiceBus.Persistence", nServiceBusDbName)
+				.RavenPersistence(connectionStringFactory, nServiceBusDbName)
 				.RunTimeoutManager()
 					.UseRavenTimeoutPersister()
 				.JsonSerializer()
@@ -91,23 +93,38 @@ namespace Ddd.Template.Denormalizer.Bootstrap
 				.Start();
 		}
 
+		protected virtual Func<string> GetConnectionStringFactory(string name)
+		{
+			return () => ConfigurationManager.ConnectionStrings[name].ConnectionString;
+		}
+
 		private void RegisterDocumentStore(IWindsorContainer container)
 		{
-			var store = new DocumentStore
-			{
-				ConnectionStringName = Settings.RavenDbConnectionStringName,
-				ResourceManagerId = Guid.NewGuid()
-			};
+			var store = CreateDocumentStore();
 
 			store.Initialize();
 
 			var projectionsDbName = ConfigurationManager.AppSettings["RavenDbName"];
-			store.DatabaseCommands.EnsureDatabaseExists(projectionsDbName);
+			store.EnsureDatabaseExists(projectionsDbName);
 
 			var nServiceBusDbName = ConfigurationManager.AppSettings["NServiceBus.Persistence.RavenDbName"];
-			store.DatabaseCommands.EnsureDatabaseExists(nServiceBusDbName);
+			store.EnsureDatabaseExists(nServiceBusDbName);
 
 			container.Register(Component.For<IDocumentStore>().Instance(store));
+		}
+
+		protected virtual IDocumentStore CreateDocumentStore()
+		{
+			return new DocumentStore
+			{
+				ConnectionStringName = Settings.RavenDbConnectionStringName,
+				ResourceManagerId = Guid.NewGuid()
+			};
+		}
+
+		protected virtual void RunInstallers(IWindsorContainer container)
+		{
+			container.Install(FromAssembly.This());
 		}
 	}
 }

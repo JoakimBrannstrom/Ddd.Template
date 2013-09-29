@@ -1,8 +1,11 @@
 ﻿using Raven.Client;
 using Raven.Client.Embedded;
+using Raven.Client.Indexes;
 using Raven.Database;
+using System;
 using System.Web.Mvc;
 using Ddd.Template.Web.Controllers;
+using Ddd.Template.Web.Scaffolding.RavenIndexes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Ddd.Template.Web.Tests.Controllers
@@ -23,6 +26,8 @@ namespace Ddd.Template.Web.Tests.Controllers
 			};
 
 			_store.Initialize();
+
+			IndexCreation.CreateIndexes(typeof(AllVisitorsIndex).Assembly, _store);
 
 			_session = _store.OpenSession();
 			_controller = new HomeController(_session);
@@ -67,6 +72,31 @@ namespace Ddd.Template.Web.Tests.Controllers
 
 			// Act
 			var result = _controller.Contact() as ViewResult;
+
+			// Assert
+			Assert.IsNotNull(result);
+		}
+
+		[TestMethod]
+		public void ClientInformation()
+		{
+			// Arrange
+
+			// Act
+			var result = _controller.ClientInformation() as ViewResult;
+
+			// Assert
+			Assert.IsNotNull(result);
+		}
+
+		[TestMethod]
+		public void VisitorInformation()
+		{
+			// Arrange
+			_session.Store(new Ddd.Template.Projections.Visitor { Id = Guid.NewGuid() });
+
+			// Act
+			var result = _controller.VisitorInformation() as ViewResult;
 
 			// Assert
 			Assert.IsNotNull(result);

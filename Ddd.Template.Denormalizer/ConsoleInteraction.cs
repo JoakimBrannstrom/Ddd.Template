@@ -4,6 +4,7 @@ using NServiceBus;
 
 namespace Ddd.Template.Denormalizer
 {
+	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal sealed class ConsoleInteraction : IWantToRunAtStartup, IHandleMessages<Event>
 	{
 		public void Run()

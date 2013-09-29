@@ -98,6 +98,10 @@
       <Project>{F5B6DC24-BCFE-46E6-9041-C45AE0A9B761}</Project>
       <Name>Ddd.Template.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Ddd.Template.Contrib\Ddd.Template.Contrib.csproj">
+      <Project>{c9a77f1e-038b-416f-9d8c-fb6dd8d0074d}</Project>
+      <Name>Ddd.Template.Contrib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Ddd.Template.Projections\Ddd.Template.Projections.csproj">
       <Project>{B829DF8C-383E-44FD-BE25-24EB194D0F72}</Project>
       <Name>Ddd.Template.Projections</Name>

@@ -46,6 +46,12 @@ namespace Ddd.Template.Denormalizer.Tests
 			RunTestScenario(eventHandler);
 		}
 
+		[TestCleanup]
+		public void Cleanup()
+		{
+			Dispose();
+		}
+
 		private IHandleMessages<TEvent> GetEventHandler()
 		{
 			_dependencyConfigurator = new DependencyConfigurator<TEvent, TEventHandler>();

@@ -5,6 +5,7 @@ using NServiceBus;
 
 namespace Ddd.Template.Server
 {
+	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	internal sealed class ConsoleInteraction : IWantToRunAtStartup,
 										IHandleMessages<IMessage>,
 										IHandleMessages<Command>,

@@ -12,6 +12,7 @@ using Raven.Client.Extensions;
 
 namespace Ddd.Template.Projections.Rebuilder
 {
+	[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 	static class Program
 	{
 		static void Main()
