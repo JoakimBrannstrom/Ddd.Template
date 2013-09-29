@@ -15,7 +15,6 @@ namespace Ddd.Template.Server.Tests.Contracts
 		[TestMethod]
 		public void VerifyThatEachCommandHandlerMethodHaveAtLeastOneTest()
 		{
-			// var commandHandlers = AppDomain.CurrentDomain.GetAssemblies().ToArray().SelectMany(s => s.GetTypes())
 			var commandHandlers = typeof(CommandHandlerBase<>).Assembly.GetTypes()
 									.Where(t => GetMessageHandlerContracts(t).Any())
 									.ToArray();
@@ -44,7 +43,7 @@ namespace Ddd.Template.Server.Tests.Contracts
 
 		private static IEnumerable<Type> GetMessageHandlerContracts(Type messageHandlerCandidate)
 		{
-			var messageHandler = typeof(IMessageHandler<>);
+			var messageHandler = typeof(IHandleMessages<>);
 
 			var interfaces = messageHandlerCandidate.GetInterfaces();
 

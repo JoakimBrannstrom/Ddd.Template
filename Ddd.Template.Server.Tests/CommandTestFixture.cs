@@ -64,6 +64,12 @@ namespace Ddd.Template.Server.Tests
 			RunTestScenario(commandHandler);
 		}
 
+		[TestCleanup]
+		public void Cleanup()
+		{
+			Dispose();
+		}
+
 		private IHandleMessages<TCommand> GetCommandHandler()
 		{
 			_dependencyConfigurator = new DependencyConfigurator<TAggregateRoot, TCommand, TCommandHandler>();

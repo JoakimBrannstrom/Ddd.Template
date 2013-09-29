@@ -1,5 +1,6 @@
 -------------------------------------------
 ##Now
+* Increase code coverage
 
 ###Denormalizer:
 

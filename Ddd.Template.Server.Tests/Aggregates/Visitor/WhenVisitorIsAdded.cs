@@ -68,6 +68,7 @@ namespace Ddd.Template.Server.Tests.Aggregates.Visitor
 			{
 				VerifyLastException<ConcurrencyException>();
 			}
+
 			[TestMethod]
 			public void NoEventsShouldBePublishedOnTheBus()
 			{

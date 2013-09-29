@@ -116,6 +116,10 @@
       <Project>{f5b6dc24-bcfe-46e6-9041-c45ae0a9b761}</Project>
       <Name>Ddd.Template.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Ddd.Template.Contrib\Ddd.Template.Contrib.csproj">
+      <Project>{c9a77f1e-038b-416f-9d8c-fb6dd8d0074d}</Project>
+      <Name>Ddd.Template.Contrib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Ddd.Template.Domain\Ddd.Template.Domain.csproj">
       <Project>{d286f980-3634-4f6c-9b2e-334d2a44d07b}</Project>
       <Name>Ddd.Template.Domain</Name>
@@ -128,6 +132,7 @@
   </Target>
   <Target Name="AfterBuild">
   </Target>
+
   -->
   <UsingTask TaskName="AsyncExec" AssemblyFile="$(SolutionDir)..\MsBuild.Tasks\MsBuild.Tasks\bin\Debug\Meganerd.MsBuild.Tasks.dll" />
   <Target Name="StartRavenDb" AfterTargets="AfterBuild">
