@@ -83,12 +83,16 @@ namespace Ddd.Template.Projections.Rebuilder.Tests.HandlerDiscovery
 			const int nrOfIterations = 100000;
 			var invokeCounter = 0;
 
+			/* this Moq-handler is ~3 times slower than the FakeHandler
 			var handler = new Mock<IHandleMessages<Event>>();
 			handler
 				.Setup(h => h.Handle(It.IsAny<Event>()))
 				.Callback(() => invokeCounter++);
-
 			var invoker = new HandlerInvoker(new [] { handler.Object });
+			*/
+
+			var handler = new FakeHandler();
+			var invoker = new HandlerInvoker(new [] { handler });
 
 			var timer = new Stopwatch();
 			timer.Start();
@@ -102,8 +106,9 @@ namespace Ddd.Template.Projections.Rebuilder.Tests.HandlerDiscovery
 
 			// Assert
 			timer.Stop();
+			invokeCounter = handler.Counter;
 
-			Console.WriteLine(invokeCounter.ToString("N") + " nr of calls was completed in {0}", timer.Elapsed);
+			Console.WriteLine("{0} nr of calls was completed in {1}", invokeCounter.ToString("N0"), timer.Elapsed);
 
 			Assert.AreEqual(nrOfIterations, invokeCounter);
 			Assert.IsTrue(timer.Elapsed < TimeSpan.FromSeconds(1.5),
@@ -111,11 +116,20 @@ namespace Ddd.Template.Projections.Rebuilder.Tests.HandlerDiscovery
 											nrOfIterations, timer.Elapsed));
 		}
 
+		private class FakeHandler : IHandleMessages<Event>
+		{
+			public int Counter { get; private set; }
+
+			public void Handle(Event @event)
+			{
+				Counter++;
+			}
+		}
+
 		[TestMethod]
 		public void HowFastIsDotNet()
 		{
 			// Arrange
-			// const double nrOfIterations = 110000000;
 			const double nrOfIterations = 40000000;
 			double invokeCounter = 0;
 
@@ -131,7 +145,7 @@ namespace Ddd.Template.Projections.Rebuilder.Tests.HandlerDiscovery
 			// Assert
 			timer.Stop();
 
-			Console.WriteLine(invokeCounter.ToString("N") + " nr of calls was completed in {0}", timer.Elapsed);
+			Console.WriteLine("{0} nr of calls was completed in {1}", invokeCounter.ToString("N0"), timer.Elapsed);
 			Assert.IsTrue(timer.Elapsed < TimeSpan.FromSeconds(1.5),
 							string.Format("Replay of {0} events took too long time, it was completed in: {1}",
 											invokeCounter, timer.Elapsed));

@@ -1,6 +1,5 @@
 -------------------------------------------
 ##Now
-* Increase code coverage
 
 ###Denormalizer:
 
@@ -16,6 +15,7 @@
 -------------------------------------------
 
 ##Done
+* Increase code coverage
 * Add projections-rebuilder
 * Add denormalizer
 	- Create "current" domain view, including raven indexes

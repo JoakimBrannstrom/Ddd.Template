@@ -14,7 +14,7 @@ namespace Ddd.Template.Web.Tests.Startup
 			// Arrange
 			FakeBus
 				.Setup(b => b.Send(It.IsAny<AddVisitor>()))
-				.Verifiable();
+				.Verifiable("'AddVisitor' was never published on the bus!");
 
 			// Act
 			Session_Start(null, null);
@@ -29,7 +29,7 @@ namespace Ddd.Template.Web.Tests.Startup
 			// Arrange
 			FakeSession
 				.Setup(s => s.Add("VisitorId", It.IsAny<Guid>()))
-				.Verifiable();
+				.Verifiable("'VisitorId' was not stored in the session!");
 
 			// Act
 			Session_Start(null, null);
